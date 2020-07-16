@@ -1,0 +1,109 @@
+/* main body styling */
+body{
+  background-color: black;
+}
+/* navbar stylings */
+
+.navbar {
+  font-family: 'ZCOOL XiaoWei', serif;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.navbar-brand {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+  border-radius: 50%;
+}
+
+.nav-hamburger {
+  width: 25px;
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* Main page Background video */
+
+#mainpagevideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+/* main page teaser */
+
+#center-of-page-card {
+  position: absolute;
+  top: 20vh;
+  bottom: 20vh;
+  width: 100%;
+}
+
+#mainpage-teaser {
+  display: flex;
+  justify-content: space-around;
+}
+
+#saver-card {
+  position: relative;
+  background-color: rgba(0,0,0,0.8) ;
+  border: 2px black solid;
+  height: 65vh;
+}
+
+#undecided-card {
+  position: relative;
+  background-color: rgba(0,0,0,0.8) ;
+  border: 2px black solid;
+  height: 65vh;
+}
+
+#grower-card {
+  position: relative;
+  background-color:rgba(0,0,0,0.8);
+  border: 2px black solid;
+  height: 65vh;
+}
+
+.card-text-header {
+  font-family: 'ZCOOL XiaoWei', serif;
+  color: white;
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+.card-text-body {
+  padding-top: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  
+}

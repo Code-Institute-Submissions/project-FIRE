@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The FIRE Project</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="nav-hamburger"></div>
+      <div class="nav-hamburger"></div>
+      <div class="nav-hamburger"></div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About FIRE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Stock Screener</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reviews</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Main background video -->
+  <video autoplay muted loop id="mainpagevideo">
+    <source src="mainbackground.mp4" type="video/mp4">
+  </video>
+  
+  <section id="center-of-page-card">
+    <div data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+      <div class="container-fluid" id="mainpage-teaser">
+        <div class="card" style="width: 25rem;" id="saver-card">
+          <div class="card-body">
+            <h5 class="card-title card-text-header">The Saver</h5>
+            <img class="card-img-top" src="/pictures/saver.jpg" alt="Card image cap">
+            <p class="card-text card-text-body">You believe that the slow and steady wins the race. You want to take things slow and you firmly believe that the stock market rewards those who are patient.</p>
+            <a href="#" class="btn btn-danger">This is ME!</a>
+          </div>
+        </div>
+        <div class="card" style="width: 25rem;" id="undecided-card">
+          <div class="card-body">
+            <h5 class="card-title card-text-header">The Undecided</h5>
+            <img class="card-img-top" src="pictures/thinking.jpg" alt="Card image cap">
+            <p class="card-text card-text-body">You believe that the key to life is good balance. Work-Life balance, balance in investment strategy and most importantly, your bank balance. </p>
+            <a href="#" class="btn btn-danger">This is ME!</a>
+          </div>
+        </div>
+        <div class="card" style="width: 25rem;" id="grower-card">
+          <div class="card-body">
+            <h5 class="card-title card-text-header">The Grower</h5>
+            <img class="card-img-top" src="/pictures/grower.jpg" alt="Card image cap">
+            <p class="card-text card-text-body">You love extreme sports, you love the adrenaline rush and most importantly of all, you wont take a measely 4% p.a. on the return of your money.</p>
+            <a href="#" class="btn btn-danger">This is ME!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    AOS.init();
+  </script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Axios -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <!-- Animate on scroll library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- my script -->
+  <script src="script.js"></script>
+</body>
+</html>
