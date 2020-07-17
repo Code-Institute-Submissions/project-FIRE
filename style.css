@@ -12,8 +12,7 @@ body{
   height: 10vh;
   z-index: 10;
   width: 100%;
-  background-color: rgba(0,0,0,0.7);
-  margin-bottom: 10vh;
+  background-color: rgba(0,0,0,0.9);
 }
 
 .navbar-brand {
@@ -56,6 +55,36 @@ body{
   z-index: -1;
 }
 
+/* Mainpage jumbotron */
+
+#mainpage-jumbo {
+  background-color: rgba(0,0,0,0.7);
+}
+
+hr {
+  color: white;
+  border: 0.5px white solid;
+  width: 60%;
+  margin: 0 0 10px 0;
+  
+}
+
+#main-jumbo-header {
+  color: #fc6203;
+  font-weight: bolder;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+#main-jumbo-lead {
+  color: white;
+  font-weight: bolder;
+  font-family: 'ZCOOL XiaoWei', serif;
+}
+
+#main-jumbo-text {
+  color: white;
+}
+
 /* main page teaser */
 
 #center-of-page-card {
@@ -71,7 +100,7 @@ body{
   position: relative;
   background-color: rgba(0,0,0,0.8) ;
   border: 2px black solid;
-  height: 70vh;
+  min-height: 600px;
   border: 1px white solid;
 }
 
@@ -102,6 +131,20 @@ body{
 
 #saver-page-main {
   height: 20vh;
+}
+
+/* Saver page undecided text */
+#saver-undecided-box {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#saver-undecided-text {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 2px 2px black;
 }
 
 /* Saver page search box */
@@ -147,7 +190,7 @@ body{
 
 #low-pe-card {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 #low-pe-card-main {
@@ -197,7 +240,7 @@ body{
 
 #high-div-card {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 #high-div-card-main {
@@ -304,7 +347,7 @@ body{
   }
 
   .teaser-card {
-    height: 70vh;
+    min-height: 500px;
   }
 }
 
