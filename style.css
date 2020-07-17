@@ -88,16 +88,20 @@ body{
   font-size: 20px;
 }
 
-.btn {
+.main-page-btn {
   position: absolute;
   bottom: 25px;
   left: 25px;
+  background-color: #fc6203;
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
 }
 
 /* Saver page main container */
 
 #saver-page-main {
-  height: 80vh;
+  height: 20vh;
 }
 
 /* Saver page search box */
@@ -120,6 +124,65 @@ body{
   border: 3px black solid;
   padding: 10px;
   box-shadow: black 2px 2px;
+}
+
+.search-btn {
+  background-color: #fc6203;
+  color: white;
+  font-weight: bolder;
+  font-size: 15px;
+  margin-left: 15px;
+  padding: 0px 10px;
+  border-radius: 25px;
+}
+
+/* Saver Page low PE stocks section */
+#low-pe-container {
+  margin: auto;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+#low-pe-card {
+  display: flex;
+  justify-content: center;
+}
+
+#low-pe-card-main {
+  border-radius: 25px;
+  background-color: rgba(255,255,255,0.5);
+}
+
+#low-pe-text {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+#low-pe-card-header {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+#low-pe-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 25px;
+}
+
+#low-pe-search-btn {
+  background-color: #fc6203;
+  color: black;
+  font-weight: bolder;
+  font-size: 15px;
+  margin-left: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
 /* Footer */
