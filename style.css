@@ -55,9 +55,9 @@ body{
   z-index: -1;
 }
 
-/* Mainpage jumbotron */
+/* jumbotron stylings */
 
-#mainpage-jumbo {
+.jumbo-bg {
   background-color: rgba(0,0,0,0.7);
 }
 
@@ -69,19 +69,19 @@ hr {
   
 }
 
-#main-jumbo-header {
+.jumbo-header {
   color: #fc6203;
   font-weight: bolder;
   font-family: 'ZCOOL XiaoWei', serif;
 }
 
-#main-jumbo-lead {
+.jumbo-lead {
   color: white;
   font-weight: bolder;
   font-family: 'ZCOOL XiaoWei', serif;
 }
 
-#main-jumbo-text {
+.jumbo-text {
   color: white;
 }
 
@@ -128,23 +128,32 @@ hr {
 }
 
 /* Saver page main container */
+#saver-page-header {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #fc6203;
+  font-family: 'ZCOOL XiaoWei', serif;
+  padding: 20px 0 20px 0;
+}
 
 #saver-page-main {
-  height: 20vh;
+  height: 80px;
 }
 
 /* Saver page undecided text */
 #saver-undecided-box {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 40px 0 50px 0;
 }
 
 #saver-undecided-text {
   font-family: 'ZCOOL XiaoWei', serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bolder;
-  color: white;
-  text-shadow: 2px 2px black;
+  color: #fc6203;
+  text-shadow: 3px 3px black;
 }
 
 /* Saver page search box */
@@ -152,6 +161,7 @@ hr {
 #saver-search-container {
   display: flex;
   justify-content: center;
+  margin: 60px 0 60px 0;
 }
 
 #saver-search-text {
@@ -182,7 +192,8 @@ hr {
 /* Saver Page low PE stocks section */
 #low-pe-container {
   margin: auto;
-  margin-bottom: 40px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   padding: 0px;
   display: flex;
   justify-content: center;
@@ -195,7 +206,7 @@ hr {
 
 #low-pe-card-main {
   border-radius: 25px;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.8);
 }
 
 #low-pe-text {
@@ -215,7 +226,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   border-radius: 25px;
 }
 
@@ -245,7 +256,7 @@ hr {
 
 #high-div-card-main {
   border-radius: 25px;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.8);
 }
 
 #high-div-text {
@@ -265,7 +276,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   border-radius: 25px;
 }
 
