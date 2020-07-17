@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The FIRE Project</title>
+  <!-- BootStrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- My own CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,6 +36,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Reviews</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -39,38 +47,60 @@
     <source src="mainbackground.mp4" type="video/mp4">
   </video>
   
-  <section id="center-of-page-card">
-    <div data-aos="fade-down"
-     data-aos-easing="linear"
-     data-aos-duration="1500">
-      <div class="container-fluid" id="mainpage-teaser">
-        <div class="card teaser-card" id="saver-card" style="width: 25rem;">
-          <div class="card-body">
-            <h5 class="card-title card-text-header">The Saver</h5>
-            <img class="card-img-top" src="/pictures/saver.jpg" alt="Card image cap">
-            <p class="card-text card-text-body">You believe that the slow and steady wins the race. You want to take things slow and you firmly believe that the stock market rewards those who are patient.</p>
-            <a href="#" class="btn btn-danger">This is ME!</a>
+  <!-- Main page with 3 choices cards -->
+  <div class="container-fluid">
+    <section id="center-of-page-card">
+
+      <!-- AOS for cards -->
+
+      <div data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500">
+        <div class="container-fluid" id="mainpage-teaser">
+          <!-- Saver card -->
+          <div class="card teaser-card" id="saver-card" style="width: 25rem;">
+            <div class="card-body">
+              <h5 class="card-title card-text-header">The Saver</h5>
+              <img class="card-img-top" src="/pictures/saver.jpg" alt="Card image cap">
+              <p class="card-text card-text-body">You believe that the slow and steady wins the race. You want to take things slow and you firmly believe that the stock market rewards those who are patient.</p>
+              <a href="#" class="btn btn-danger">This is ME!</a>
+            </div>
           </div>
-        </div>
-        <div class="card teaser-card" id="thinking-card" style="width: 25rem;">
-          <div class="card-body">
-            <h5 class="card-title card-text-header">The Undecided</h5>
-            <img class="card-img-top" src="pictures/thinking.jpg" alt="Card image cap">
-            <p class="card-text card-text-body">You believe that the key to life is good balance. Work-Life balance, balance in investment strategy and most importantly, your bank balance. </p>
-            <a href="#" class="btn btn-danger">This is ME!</a>
+          <!-- Undecided card -->
+          <div class="card teaser-card" id="thinking-card" style="width: 25rem;">
+            <div class="card-body">
+              <h5 class="card-title card-text-header">The Undecided</h5>
+              <img class="card-img-top" src="pictures/thinking.jpg" alt="Card image cap">
+              <p class="card-text card-text-body">You believe that the key to life is good balance. Work-Life balance, balance in investment strategy and most importantly, your bank balance. </p>
+              <a href="#" class="btn btn-danger">This is ME!</a>
+            </div>
           </div>
-        </div>
-        <div class="card teaser-card" id="grower-card" style="width: 25rem;">
-          <div class="card-body">
-            <h5 class="card-title card-text-header">The Grower</h5>
-            <img class="card-img-top" src="/pictures/grower.jpg" alt="Card image cap">
-            <p class="card-text card-text-body">You love extreme sports, you love the adrenaline rush and most importantly of all, you wont take a measely 4% p.a. on the return of your money.</p>
-            <a href="#" class="btn btn-danger">This is ME!</a>
+          <!-- Grower card -->
+          <div class="card teaser-card" id="grower-card" style="width: 25rem;">
+            <div class="card-body">
+              <h5 class="card-title card-text-header">The Grower</h5>
+              <img class="card-img-top" src="/pictures/grower.jpg" alt="Card image cap">
+              <p class="card-text card-text-body">You love extreme sports, you love the adrenaline rush and most importantly of all, you wont take a measely 4% p.a. on the return of your money.</p>
+              <a href="#" class="btn btn-danger">This is ME!</a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+  </div>
+<!-- Footer -->
+  <footer>
+    <div class="container-fluid" id="footer">
+      <div><p>Find us on Social Media!</p></div>
+      <div>
+        <span><i class="fa fa-facebook-official" aria-hidden="true"></i></span>
+        <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+        <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+        <span><i class="fa fa-reddit" aria-hidden="true"></i></span>
+        <span><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
+      </div>
     </div>
-  </section>
+  </footer>
 
   <script>
     AOS.init();

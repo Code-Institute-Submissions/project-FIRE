@@ -3,15 +3,17 @@ body{
   background-color: black;
   margin: 0px;
   padding: 0px;
+  height: 100%;
 }
 /* navbar stylings */
 
 .navbar {
   font-family: 'ZCOOL XiaoWei', serif;
-  position: absolute;
+  height: 10vh;
   z-index: 10;
   width: 100%;
   background-color: rgba(0,0,0,0.7);
+  margin-bottom: 10vh;
 }
 
 .navbar-brand {
@@ -57,9 +59,6 @@ body{
 /* main page teaser */
 
 #center-of-page-card {
-  position: absolute;
-  top: 20vh;
-  bottom: 20vh;
   width: 100%;
 }
 
@@ -93,14 +92,31 @@ body{
   position: absolute;
   bottom: 25px;
   left: 25px;
-  
+}
+
+/* Footer */
+
+#footer {
+  height: 120px;
+  font-family: 'ZCOOL XiaoWei', serif;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  margin-top: 10vh;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.fa {
+  font-size: 30px;
+  color: white;
 }
 
 /* ------------smallest phone size------------ */
 @media only screen and (max-width: 400px){
   .navbar {
     font-family: 'ZCOOL XiaoWei', serif;
-    position: absolute;
     z-index: 10;
     width: 100%;
     background-color: rgba(0,0,0,0.7);
