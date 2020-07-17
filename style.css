@@ -94,6 +94,34 @@ body{
   left: 25px;
 }
 
+/* Saver page main container */
+
+#saver-page-main {
+  height: 80vh;
+}
+
+/* Saver page search box */
+
+#saver-search-container {
+  display: flex;
+  justify-content: center;
+}
+
+#saver-search-text {
+  color: white;
+  font-weight: Bolder;
+  font-size: 30px;
+  margin-right: 20px;
+  text-shadow: 4px 4px black;
+}
+
+#saver-search {
+  border-radius: 25px;
+  border: 3px black solid;
+  padding: 10px;
+  box-shadow: black 2px 2px;
+}
+
 /* Footer */
 
 #footer {
