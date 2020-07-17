@@ -139,6 +139,7 @@ body{
 /* Saver Page low PE stocks section */
 #low-pe-container {
   margin: auto;
+  margin-bottom: 40px;
   padding: 0px;
   display: flex;
   justify-content: center;
@@ -151,7 +152,7 @@ body{
 
 #low-pe-card-main {
   border-radius: 25px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.7);
 }
 
 #low-pe-text {
@@ -171,11 +172,61 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
   border-radius: 25px;
 }
 
 #low-pe-search-btn {
+  background-color: #fc6203;
+  color: black;
+  font-weight: bolder;
+  font-size: 15px;
+  margin-left: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+/* Saver Page high Dividend stocks section */
+#high-div-container {
+  margin: auto;
+  margin-bottom: 40px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+#high-div-card {
+  display: flex;
+  justify-content: center;
+}
+
+#high-div-card-main {
+  border-radius: 25px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+#high-div-text {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+
+#high-div-card-header {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+#high-div-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 25px;
+}
+
+#high-div-search-btn {
   background-color: #fc6203;
   color: black;
   font-weight: bolder;
