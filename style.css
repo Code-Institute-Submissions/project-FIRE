@@ -1,6 +1,8 @@
 /* main body styling */
 body{
   background-color: black;
+  margin: 0px;
+  padding: 0px;
 }
 /* navbar stylings */
 
@@ -66,25 +68,28 @@ body{
   justify-content: space-around;
 }
 
-#saver-card {
+.teaser-card {
   position: relative;
   background-color: rgba(0,0,0,0.8) ;
   border: 2px black solid;
   height: 65vh;
+  border: 1px white solid;
 }
 
-#undecided-card {
+.teaser-card {
   position: relative;
   background-color: rgba(0,0,0,0.8) ;
   border: 2px black solid;
   height: 65vh;
+  border: 1px white solid;
 }
 
-#grower-card {
+.teaser-card {
   position: relative;
   background-color:rgba(0,0,0,0.8);
   border: 2px black solid;
   height: 65vh;
+  border: 1px white solid;
 }
 
 .card-text-header {
@@ -106,4 +111,138 @@ body{
   bottom: 25px;
   left: 25px;
   
+}
+
+/* ------------laptop screen size------------ */
+
+@media only screen and (max-width: 1440px) {
+  #mainpagevideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  .card-text-header {
+    font-family: 'ZCOOL XiaoWei', serif;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+  }
+  
+  .card-text-body {
+    padding-top: 20px;
+    color: white;
+    font-size: 15px;
+  }
+
+  .teaser-card {
+    height: 70vh;
+  }
+}
+
+/* ------------smaller laptop size------------ */
+
+@media only screen and (max-width: 1300px) {
+  #mainpagevideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  #mainpage-teaser {
+    display: block;
+  }
+
+  .teaser-card {
+    max-height: 65vh;
+    margin-top: 20px;
+  }
+  
+  #center-of-page-card {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* ------------ipad pro size------------ */
+
+/* @media only screen and (max-width: 1024px) {
+  #mainpagevideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  #mainpage-teaser {
+    display: block;
+  }
+
+  .teaser-card {
+    max-height: 40vh;
+    margin-top: 20px;
+  }
+  
+  #center-of-page-card {
+    display: flex;
+    justify-content: center;
+  }
+} */
+
+/* ------------ipad size------------ */
+/* 
+@media only screen and (max-width: 768px) {
+  #mainpagevideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  #mainpage-teaser {
+    display: block;
+  }
+
+  .teaser-card {
+    max-height: 50vh;
+    margin-top: 20px;
+  }
+  
+  #center-of-page-card {
+    display: flex;
+    justify-content: center;
+  }
+} */
+
+/* ------------iphoneX size------------ */
+
+@media only screen and (max-width: 768px) {
+  #mainpagevideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  #mainpage-teaser {
+    display: block;
+  }
+
+  
+  #center-of-page-card {
+    display: flex;
+    justify-content: center;
+  }
 }
