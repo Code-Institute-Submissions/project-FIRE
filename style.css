@@ -171,7 +171,7 @@ hr {
 /* Saver page undecided text */
 #saver-undecided-box {
   text-align: center;
-  margin: 40px 0 50px 0;
+  margin: 100px 0 50px 0;
 }
 
 #saver-undecided-text {
@@ -216,7 +216,7 @@ hr {
 }
 
 /* Saver Page low PE stocks section */
-#low-pe-container {
+.saver-container {
   margin: auto;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -225,49 +225,73 @@ hr {
   justify-content: center;
 }
 
-#low-pe-card {
+.saver-text-head {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    font-family: 'ZCOOL XiaoWei', serif;
+    padding-top: 15px;
+}
+
+.saver-card {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
-#low-pe-card-main {
-  border-radius: 25px;
+.saver-card-main {
+  border-radius: 0 25px 25px 0;
   background-color: rgba(255,255,255,0.8);
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
-#low-pe-text {
+.saver-text {
   text-align: center;
   color: white;
   font-size: 15px;
   line-height: 1.5em;
+  padding-bottom: 15px;
 }
 
-#low-pe-card-header {
+.saver-card-header {
   font-family: 'ZCOOL XiaoWei', serif;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
 }
 
-#low-pe-text-box {
+.saver-text-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.8);
-  border-radius: 25px;
+  background-color: rgba(166,166,166,0.3);
+  border-radius: 25px 0 0 25px;
 }
 
-#low-pe-search-btn {
+.saver-search-btn {
   background-color: #fc6203;
   color: black;
   font-weight: bolder;
   font-size: 15px;
-  margin-left: 15px;
+  margin: 20px 0 0 15px;
   padding: 5px 10px;
   border-radius: 10px;
 }
 
+.card-text {
+    text-align: center;
+}
+
+#search-btn-dividend {
+    margin-bottom: 30px;
+}
+
+
 /* Saver Page high Dividend stocks section */
-#high-div-container {
+/* #high-div-container {
   margin: auto;
   margin-bottom: 40px;
   padding: 0px;
@@ -314,7 +338,7 @@ hr {
   margin-left: 15px;
   padding: 5px 10px;
   border-radius: 10px;
-}
+} */
 
 /* Footer */
 
