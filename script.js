@@ -54,7 +54,9 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                                 <li>FIRE rating: ${fireRating}</li>
                             </ul>
                         </div>
-                        <div class="col-10 col-lg-5"></div>
+                        <div class="col-10 col-lg-5">
+                            <canvas id="saver-line-chart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,7 +76,33 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
             </div>
         </div>
         `
+        createChart();
         saverSearchDiv.innerHTML = saverResults
     })
 })
+
+function createChart(){
+    let saverChart = document.querySelector("#saver-line-chart").getContext('2d');
+    let saverPriceChart = new CharacterData(saverChart, {
+        type: "line",
+        data: {
+            labels: ["JAN", "FEB", "MAR", "APR"],
+            datasets: [{
+                label: "Month",
+                data: [
+                    100,
+                    100,
+                    200,
+                    500
+                ]
+            }]
+        },
+        options: {
+            title:{
+                display:true,
+                text:"12 Month Price Movements"
+            }
+        },
+    });
+}
 
