@@ -10,24 +10,30 @@ let apiUrl = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=msft&ap
 document.querySelector('#saver-search-btn').addEventListener('click', function () {
     searchInput = document.querySelector('#saver-search').value;
     let newApiUrl = `https://www.alphavantage.co/query?function=OVERVIEW&symbol=${searchInput}&apikey=486OHSPRRLZR5IJI
-    `
+    `;
     axios.get(newApiUrl).then(function (response) {
-        if (response.data.PERatio<20){
-            let fireRating = "Firey Hot!"
-        }else if(response.data.PERatio<30){
-            let fireRating = "Hot!"
-        }else if(response.data.PERatio<50){
-            let fireRating = "Warm"
-        }else if(response.data.PERatio<100){
-            let fireRating = "Cold"
+        let fireRating = "";
+        let mktCap = parseFloat(response.data.MarketCapitalization);
+        let mktCapInB = (mktCap/1000000000).toFixed( 2 );
+        let divYield = parseFloat(response.data.DividendYield);
+        let divYieldInP = (divYield * 100).toFixed( 2 );
+        let peRatio = parseFloat(response.data.PERatio).toFixed( 2 )
+        if (isNaN(peRatio)){
+            peRatio = "Not Applicable"
+        }
+        if (peRatio < 20){
+            fireRating = "Firey Hot!"
+        }else if(peRatio < 30){
+            fireRating = "Hot!"
+        }else if(peRatio < 50){
+            fireRating = "Warm"
+        }else if(peRatio < 100){
+            fireRating = "Cold"
         }else{
-            let fireRating = "Icy Cold"
+            fireRating = "Icy Cold"
         };
-        let mktCap = parseFloat(response.data.MarketCapitalization)
-        let mktCapInB = parseInt(mktCap/1000000000)
-        let divYield = parseFloat(response.data.DividendYield)
-        let divYieldInP = divYield * 100
-        let saverResult = `
+        let saverSearchDiv = document.querySelector("#saver-search-results");
+        let saverResults = `
         <div id="accordion">
             <div class="card">
                 <div class="card-header">
@@ -38,14 +44,14 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                     </h5>
                 </div>
 
-                <div id="collapseOne" class="collapse show container" aria-labelledby="headingOne" data-parent="#accordion">
+                <div id="collapseOne" class="collapse show container-fluid" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body row" id="saver-results-stock-info">
                         <div class="col-10 col-lg-5">
                             <ul>
-                                <li>Market cap: ${mktCapInB}B<li>
-                                <li>Dividend yield: ${divYieldInP}%<li>
-                                <li>P/E ratio: ${response.data.PERatio}<li>
-                                <li>FIRE rating: ${fireRating}<li>
+                                <li>Market cap: ${mktCapInB} B</li>
+                                <li>Dividend yield: ${divYieldInP}%</li>
+                                <li>P/E ratio: ${peRatio}</li>
+                                <li>FIRE rating: ${fireRating}</li>
                             </ul>
                         </div>
                         <div class="col-10 col-lg-5"></div>
@@ -61,13 +67,14 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                 </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
+                <div id="saver-search-results-description">
                 ${response.data.Description}
                 </div>
                 </div>
             </div>
         </div>
         `
+        saverSearchDiv.innerHTML = saverResults
     })
 })
 

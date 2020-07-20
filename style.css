@@ -215,6 +215,28 @@ hr {
   border-radius: 25px;
 }
 
+#collapseOne {
+    margin: 0;
+    padding: 0;
+}
+
+#collapseTwo {
+    margin: 0;
+    padding: 0;
+}
+
+#saver-results-stock-info {
+    padding: 20px !important;
+    background-color: rgba(166,166,166,0.3);
+    margin: 0px !important;
+}
+
+#saver-search-results-description {
+    padding: 20px !important;
+    background-color: rgba(166,166,166,0.3);
+    margin: 0px !important;
+}
+
 /* Saver Page low PE stocks section */
 .saver-container {
   margin: auto;
