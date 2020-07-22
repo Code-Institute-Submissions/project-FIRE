@@ -4,7 +4,7 @@
 
 let apiUrl = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=msft&apikey=486OHSPRRLZR5IJI';
 
-let  chartApiUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=tsla&apikey=486OHSPRRLZR5IJI'
+let chartApiUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=tsla&apikey=486OHSPRRLZR5IJI'
 
 
 document.querySelector('#saver-search-btn').addEventListener('click', function () {
@@ -13,8 +13,9 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
     `;
     let newChartApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${searchInput}&apikey=486OHSPRRLZR5IJI
     `;
-    axios.get(newChartApiUrl).then(function (response){
-        let chartData = [];
+    let chartData = [];
+    axios.get(newChartApiUrl).then(function (response) {
+        chartData.push(response.data["Monthly Time Series"]["2019-07-31"]["4. close"]);
         chartData.push(response.data["Monthly Time Series"]["2019-08-30"]["4. close"]);
         chartData.push(response.data["Monthly Time Series"]["2019-09-30"]["4. close"]);
         chartData.push(response.data["Monthly Time Series"]["2019-10-31"]["4. close"]);
@@ -26,28 +27,26 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         chartData.push(response.data["Monthly Time Series"]["2020-04-30"]["4. close"]);
         chartData.push(response.data["Monthly Time Series"]["2020-05-29"]["4. close"]);
         chartData.push(response.data["Monthly Time Series"]["2020-06-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-07-20"]["4. close"]);
-        console.log(chartData)
     })
     axios.get(newApiUrl).then(function (response) {
         let fireRating = "";
         let mktCap = parseFloat(response.data.MarketCapitalization);
-        let mktCapInB = (mktCap/1000000000).toFixed( 2 );
+        let mktCapInB = (mktCap / 1000000000).toFixed(2);
         let divYield = parseFloat(response.data.DividendYield);
-        let divYieldInP = (divYield * 100).toFixed( 2 );
-        let peRatio = parseFloat(response.data.PERatio).toFixed( 2 )
-        if (isNaN(peRatio)){
+        let divYieldInP = (divYield * 100).toFixed(2);
+        let peRatio = parseFloat(response.data.PERatio).toFixed(2)
+        if (isNaN(peRatio)) {
             peRatio = "Not Applicable"
         }
-        if (peRatio < 20){
+        if (peRatio < 20) {
             fireRating = "Firey Hot!"
-        }else if(peRatio < 30){
+        } else if (peRatio < 30) {
             fireRating = "Hot!"
-        }else if(peRatio < 50){
+        } else if (peRatio < 50) {
             fireRating = "Warm"
-        }else if(peRatio < 100){
+        } else if (peRatio < 100) {
             fireRating = "Cold"
-        }else{
+        } else {
             fireRating = "Icy Cold"
         };
         let saverSearchDiv = document.querySelector("#saver-search-results");
@@ -108,13 +107,13 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         saverSearchDiv.innerHTML = saverResults
 
         let saverChart = document.getElementById('saver-search-results-chart').getContext('2d');
-        var myChart = new Chart(saverChart, {
+        let myChart = new Chart(saverChart, {
             type: 'line',
             data: {
-                labels: [1,2,3,4,5,6,7,8,9,10,11,12],
+                labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                 datasets: [{
                     label: 'Months',
-                    data: [100, 200, 300, 400],
+                    data: [chartData[0], chartData[1], chartData[2], chartData[3], chartData[4], chartData[5], chartData[6], chartData[7], chartData[8], chartData[9], chartData[10], chartData[11]],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
@@ -134,15 +133,6 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                     borderWidth: 1
                 }]
             },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
         });
     });
 });
