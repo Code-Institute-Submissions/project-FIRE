@@ -4,8 +4,7 @@
 
 let apiUrl = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=msft&apikey=486OHSPRRLZR5IJI';
 
-let chartApiUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=tsla&apikey=486OHSPRRLZR5IJI'
-
+let chartApiUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=tsla&apikey=486OHSPRRLZR5IJI';
 
 document.querySelector('#saver-search-btn').addEventListener('click', function () {
     searchInput = document.querySelector('#saver-search').value;
@@ -13,21 +12,6 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
     `;
     let newChartApiUrl = `https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${searchInput}&apikey=486OHSPRRLZR5IJI
     `;
-    let chartData = [];
-    axios.get(newChartApiUrl).then(function (response) {
-        chartData.push(response.data["Monthly Time Series"]["2019-07-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-08-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-09-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-10-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-11-29"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-12-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-01-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-02-28"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-03-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-04-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-05-29"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-06-30"]["4. close"]);
-    })
     axios.get(newApiUrl).then(function (response) {
         let fireRating = "";
         let mktCap = parseFloat(response.data.MarketCapitalization);
@@ -105,7 +89,21 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         </div>
         `
         saverSearchDiv.innerHTML = saverResults
-
+    });
+        let chartData = [];
+    axios.get(newChartApiUrl).then(function (response) {
+        chartData.push(response.data["Monthly Time Series"]["2019-07-31"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2019-08-30"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2019-09-30"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2019-10-31"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2019-11-29"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2019-12-31"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2020-01-31"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2020-02-28"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2020-03-31"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2020-04-30"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2020-05-29"]["4. close"]);
+        chartData.push(response.data["Monthly Time Series"]["2020-06-30"]["4. close"]);
         let saverChart = document.getElementById('saver-search-results-chart').getContext('2d');
         let myChart = new Chart(saverChart, {
             type: 'line',
