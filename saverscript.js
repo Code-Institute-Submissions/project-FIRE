@@ -89,9 +89,61 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                 </div>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    ${response.data.Name}'s 12 Month Price Chart
+                    </button>
+                </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <canvas id="saver-search-results-chart">
+
+                    </canvas>
+                </div>
+            </div>
         </div>
         `
         saverSearchDiv.innerHTML = saverResults
+
+        let saverChart = document.getElementById('saver-search-results-chart').getContext('2d');
+        var myChart = new Chart(saverChart, {
+            type: 'line',
+            data: {
+                labels: [1,2,3,4,5,6,7,8,9,10,11,12],
+                datasets: [{
+                    label: 'Months',
+                    data: [100, 200, 300, 400],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
     });
 });
 
