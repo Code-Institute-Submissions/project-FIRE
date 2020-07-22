@@ -130,16 +130,6 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                     ],
                     borderWidth: 1
                 }],
-                options: {
-                    layout: {
-                        padding: {
-                            left: 500,
-                            right: 500,
-                            top: 500,
-                            bottom: 500
-                        }
-                    }
-                }
             },
         });
     });
