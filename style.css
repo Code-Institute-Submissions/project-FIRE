@@ -236,6 +236,10 @@ hr {
     margin: 0px !important;
 }
 
+#saver-search-results-chart {
+    padding: 5%;
+}
+
 /* Saver Page low PE stocks section */
 .saver-container {
   margin: auto;

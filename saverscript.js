@@ -90,7 +90,7 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         `
         saverSearchDiv.innerHTML = saverResults
     });
-        let chartData = [];
+    let chartData = [];
     axios.get(newChartApiUrl).then(function (response) {
         chartData.push(response.data["Monthly Time Series"]["2019-07-31"]["4. close"]);
         chartData.push(response.data["Monthly Time Series"]["2019-08-30"]["4. close"]);
@@ -129,7 +129,17 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                         'rgba(255, 159, 64, 1)'
                     ],
                     borderWidth: 1
-                }]
+                }],
+                options: {
+                    layout: {
+                        padding: {
+                            left: 500,
+                            right: 500,
+                            top: 500,
+                            bottom: 500
+                        }
+                    }
+                }
             },
         });
     });
