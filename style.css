@@ -94,6 +94,7 @@ hr {
   font-weight: bolder;
   font-family: 'ZCOOL XiaoWei', serif;
   text-align: center;
+  font-size: 1.4em;
 }
 
 .jumbo-text {
@@ -145,6 +146,8 @@ hr {
   color: white;
   font-weight: bolder;
   font-size: 15px;
+  border: 1px black solid;
+    box-shadow: 1px 1px white;
 }
 
 #saver-bg {
@@ -302,6 +305,12 @@ hr {
     text-align: center;
 }
 
+/* About page stylings */
+
+.header-color {
+    color:  #fc6203 !important;
+}
+
 /* About page jumbotron Buttons */
 
 #about-jumbo-buttons {
@@ -314,6 +323,8 @@ hr {
     color: white;
     background-color: #fc6203 !important;
     margin: 0 2% 0 2%;
+    border: 1px black solid;
+    box-shadow: 1px 1px black;
 }
 
 /* About page FIRE history */
@@ -329,10 +340,10 @@ hr {
 
 .about-fire-text-head {
     font-size: 2em;
-    color: white;
     text-align: center;
     font-family: 'ZCOOL XiaoWei', serif;
     padding-top: 5%;
+    font-weight: bolder;
 }
 
 .about-fire-text {
@@ -395,6 +406,44 @@ hr {
 .unordered-list-padding {
     padding-left: 10%;
 }
+
+/* About FIRE Approaches to FIRE */
+
+.approaches-fire-text-head {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'ZCOOL XiaoWei', serif;
+    padding-top: 5%;
+    font-weight: bolder;
+}
+
+.approaches-fire-text {
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.approaches-fire-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(166,166,166,0.3);
+  border-radius: 25px;
+  padding: 2%;
+  margin-top: 10%;
+}
+
+.about-approaches-btn {
+    color: white;
+    background-color: #fc6203 !important;
+    margin: 0 40% 0 40%;
+    max-width: 20% !important;
+    border: 1px black solid;
+    box-shadow: 1px 1px black;
+}
+
+
 
 /* Footer */
 
