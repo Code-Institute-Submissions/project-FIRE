@@ -102,7 +102,7 @@ hr {
   text-align: center;
 }
 
-/* main page teaser */
+/* index page teaser */
 
 #center-of-page-card {
   width: 100%;
@@ -126,7 +126,7 @@ hr {
 
 .card-text-header {
   font-family: 'ZCOOL XiaoWei', serif;
-  color: white;
+  color: #fc6203 !important;
   font-size: 1.5em;
   font-weight: bolder;
   padding: 5%;
@@ -143,11 +143,11 @@ hr {
   bottom: 25px;
   left: 25px;
   background-color: #fc6203;
-  color: white;
-  font-weight: bolder;
+  color: black;
+  font-weight: bold;
   font-size: 15px;
+  box-shadow: 0.5px 0.5px white;
   border: 1px black solid;
-    box-shadow: 0.5px 0.5px white;
 }
 
 #saver-bg {
@@ -320,7 +320,8 @@ hr {
 }
 
 .about-jumbo-btn {
-    color: white;
+    color: black;
+    font-weight: bold;
     background-color: #fc6203 !important;
     margin: 0 2% 0 2%;
     border: 1px black solid;
@@ -443,7 +444,8 @@ hr {
 }
 
 .about-approaches-btn {
-    color: white;
+    color: black;
+    font-weight: bold;
     background-color: #fc6203 !important;
     margin: 0 40% 5% 40%;
     max-width: 20% !important;
