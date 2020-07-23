@@ -144,24 +144,15 @@ hr {
   left: 25px;
   background-color: #fc6203;
   color: black;
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 15px;
   box-shadow: 0.5px 0.5px white;
   border: 1px black solid;
 }
 
+/* Saver page main container */
 #saver-bg {
     background-color: black;
-}
-
-/* Saver page main container */
-#saver-page-header {
-  display: flex;
-  justify-content: center;
-  font-weight: bolder;
-  color: #fc6203;
-  font-family: 'ZCOOL XiaoWei', serif;
-  padding: 20px 0 20px 0;
 }
 
 #saver-page-main {
@@ -205,7 +196,7 @@ hr {
   box-shadow: black 2px 2px;
 }
 
-.search-btn {
+#saver-search-btn {
   background-color: #fc6203;
   color: white;
   font-weight: bolder;
@@ -245,7 +236,7 @@ hr {
     padding: 5%;
 }
 
-/* Saver Page low PE stocks section */
+/* Saver Page low PE and high dividend */
 .saver-container {
   margin: auto;
   margin-top: 10%;
@@ -257,10 +248,11 @@ hr {
 
 .saver-text-head {
     font-size: 2em;
-    color: white;
+    color: #fc6203;
     text-align: center;
     font-family: 'ZCOOL XiaoWei', serif;
     padding-top: 5%;
+    font-weight: bold;
 }
 
 .saver-card {
@@ -287,10 +279,11 @@ hr {
 
 .saver-card-header {
   font-family: 'ZCOOL XiaoWei', serif;
-  font-weight: bolder;
+  font-weight: bold;
   font-size: 2em;
   text-align: center;
   padding-top: 5%;
+  color: #fc6203;
 }
 
 .saver-text-box {
@@ -303,6 +296,155 @@ hr {
 
 .card-text {
     text-align: center;
+}
+
+/* Grower page */
+
+#grower-bg {
+    background-color: black;
+}
+
+#grower-jumbo-text {
+    color: #e62c2c;
+}
+
+#grower-page-main {
+  height: 10%;
+}
+
+/* Grower page undecided text */
+#grower-undecided-box {
+  text-align: center;
+  margin: 10% 0 5% 0;
+}
+
+#grower-undecided-text {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 2em;
+  font-weight: bolder;
+  color: #e62c2c;
+  text-shadow: 3px 3px black;
+}
+
+/* Grower page search box */
+
+#grower-search-container {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0 0 0;
+}
+
+#grower-search-text {
+  color: white;
+  font-weight: Bolder;
+  font-size: 30px;
+  margin-right: 20px;
+  text-shadow: 4px 4px black;
+}
+
+#grower-search {
+  border-radius: 25px;
+  border: 3px black solid;
+  padding: 10px;
+  box-shadow: black 2px 2px;
+}
+
+#grower-search-btn {
+  background-color: #e62c2c;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 15px;
+  padding: 0px 10px;
+  border-radius: 25px;
+}
+
+#collapseGrowerOne {
+    margin: 0;
+    padding: 0;
+}
+
+#collapseGrowerTwo {
+    margin: 0;
+    padding: 0;
+}
+
+#grower-search-results {
+    margin-top: 5%;
+}
+
+#grower-results-stock-info {
+    padding: 3% !important;
+    background-color: rgba(166,166,166,0.3);
+    margin-top: 0px !important;
+}
+
+#grower-search-results-description {
+    padding: 3% !important;
+    background-color: rgba(166,166,166,0.3);
+    margin: 0px !important;
+}
+
+#grower-search-results-chart {
+    padding: 5%;
+}
+
+/* Grower Page disruptive company and low PEG companies */
+.grower-container {
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.grower-text-head {
+    font-size: 2em;
+    color: #e62c2c;
+    text-align: center;
+    font-family: 'ZCOOL XiaoWei', serif;
+    padding-top: 5%;
+    font-weight: bold;
+}
+
+.grower-card {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.grower-card-main {
+  border-radius: 0 25px 25px 0;
+  background-color: rgba(255,255,255,0.8);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.grower-text {
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding-bottom: 5%;
+}
+
+.grower-card-header {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-weight: bolder;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 5%;
+  color: #e62c2c;
+}
+
+.grower-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(166,166,166,0.3);
+  border-radius: 25px 0 0 25px;
 }
 
 /* About page stylings */
