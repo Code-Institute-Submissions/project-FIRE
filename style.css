@@ -447,6 +447,10 @@ hr {
   border-radius: 25px 0 0 25px;
 }
 
+#grower-notable-margin {
+    margin-bottom: 8%;
+}
+
 /* About page stylings */
 
 .header-color {
