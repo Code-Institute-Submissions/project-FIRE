@@ -91,27 +91,30 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         saverSearchDiv.innerHTML = saverResults
     });
     let chartData = [];
+    let chartMonth = [];
     axios.get(newChartApiUrl).then(function (response) {
-        chartData.push(response.data["Monthly Time Series"]["2019-07-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-08-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-09-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-10-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-11-29"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-12-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-01-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-02-28"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-03-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-04-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-05-29"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-06-30"]["4. close"]);
+        let resultCount= 0;
+        for (let [k, v] of Object.entries(response.data["Monthly Time Series"])) {
+            chartData.push(v["4. close"]);
+            chartMonth.push(k)
+            resultCount ++;
+            if (Object.keys(response.data["Monthly Time Series"]).length < 12) {
+                if (Object.keys(response.data["Monthly Time Series"]).length === resultCount){
+                break;
+                };
+            }else if(resultCount === 12){
+                break;
+            };
+        };
+
         let saverChart = document.getElementById('saver-search-results-chart').getContext('2d');
         let myChart = new Chart(saverChart, {
             type: 'line',
             data: {
-                labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                labels: chartMonth.reverse(),
                 datasets: [{
                     label: 'Months',
-                    data: [chartData[0], chartData[1], chartData[2], chartData[3], chartData[4], chartData[5], chartData[6], chartData[7], chartData[8], chartData[9], chartData[10], chartData[11]],
+                    data: chartData.reverse(),
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
