@@ -22,6 +22,9 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         if (isNaN(peRatio)) {
             peRatio = "Not Applicable"
         }
+        if (isNaN(divYieldInP)) {
+            divYieldInP = "Not Applicable"
+        }
         if (peRatio < 20) {
             fireRating = "Firey Hot!"
         } else if (peRatio < 30) {
@@ -76,7 +79,7 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                 <div class="card-header">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    ${response.data.Name}'s 12 Month Price Chart
+                    ${response.data.Name}'s 10 Month Price Chart
                     </button>
                 </h5>
                 </div>
@@ -98,11 +101,11 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
             chartData.push(v["4. close"]);
             chartMonth.push(k)
             resultCount ++;
-            if (Object.keys(response.data["Monthly Time Series"]).length < 12) {
+            if (Object.keys(response.data["Monthly Time Series"]).length < 10) {
                 if (Object.keys(response.data["Monthly Time Series"]).length === resultCount){
                 break;
                 };
-            }else if(resultCount === 12){
+            }else if(resultCount === 10){
                 break;
             };
         };
@@ -113,23 +116,13 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
             data: {
                 labels: chartMonth.reverse(),
                 datasets: [{
-                    label: 'Months',
+                    label: '10 Month Stock Price',
                     data: chartData.reverse(),
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        'rgba(255, 99, 132, 0.2)'
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'rgba(255, 99, 132, 1)'
                     ],
                     borderWidth: 1
                 }],
