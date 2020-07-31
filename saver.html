@@ -1,173 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The FIRE Project</title>
-  <!-- BootStrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
-  <!-- Fontawesome CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- My own CSS -->
-  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>The FIRE Project</title>
+	<!-- BootStrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- My own CSS -->
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#" id="nav-logo"><img src="pictures/firelogo.png"> </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg">
+		<a class="navbar-brand" href="#" id="nav-logo"><img src="pictures/firelogo.png"> </a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <div class="nav-hamburger"></div>
       <div class="nav-hamburger"></div>
       <div class="nav-hamburger"></div>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About FIRE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="saver.html">Saver</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="grower.html">Grower</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Community</a>
-        </li>
-        <li class="nav-item last-nav-link">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-    <!-- Main background video -->
-    <!-- <video autoplay muted loop id="mainpagevideo">
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About FIRE</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="saver.html">Saver</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="undecided.html">Undecided</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="grower.html">Grower</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Community</a>
+					</li>
+					<li class="nav-item last-nav-link">
+						<a class="nav-link" href="#">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+	</nav>
+	<!-- Main background video -->
+	<!-- <video autoplay muted loop id="mainpagevideo">
         <source src="mainbackground.mp4" type="video/mp4">
     </video> -->
 
-    <main id="saver-bg">
-        <!-- Main page jumbotron -->
-        <div class="jumbotron jumbo-bg">
-            <h1 class="display-4 jumbo-header">The Saver</h1>
-            <p class="lead jumbo-lead">Prosper through stability.</p>
-            <hr>
-            <p class="jumbo-text">For you who prefer to tide through any market conditions unscathed.</p>
-        </div>
-        <!-- Saver page search bar -->
-        <section id="saver-page-main">
-            <form id="saver-search-container" class="container-fluid">
-                <label for="saver-search" id="saver-search-text">Search By Ticker Symbol</label>
-                <input type="text" id="saver-search" placeholder="E.g. AAPL">
-                <button class="search-btn" type="button" id="saver-search-btn">Search</button>
-            </form>
-        </section>
-        <!-- Saver page search results -->
-        <section id="saver-search-results">
+	<main id="saver-bg">
+		<!-- Main page jumbotron -->
+		<div class="jumbotron jumbo-bg">
+			<h1 class="display-4 jumbo-header">The Saver</h1>
+			<p class="lead jumbo-lead">Prosper through stability.</p>
+			<hr>
+			<p class="jumbo-text">For you who prefer to tide through any market conditions unscathed.</p>
+		</div>
+		<!-- Saver page search bar -->
+		<section id="saver-page-main">
+			<form id="saver-search-container" class="container-fluid">
+				<label for="saver-search" id="saver-search-text">Search By Ticker Symbol</label>
+				<input type="text" id="saver-search" placeholder="E.g. AAPL">
+				<button class="search-btn" type="button" id="saver-search-btn">Search</button>
+			</form>
+		</section>
+		<!-- Saver page search results -->
+		<section id="saver-search-results">
 
-        </section>
-        <!-- Saver page undecided text -->
-        <div id="saver-undecided-box"><span id="saver-undecided-text">Not sure what you are looking for? Here are
+		</section>
+		<!-- Saver page undecided text -->
+		<div id="saver-undecided-box"><span id="saver-undecided-text">Not sure what you are looking for? Here are
                 some ideas for you!</span></div>
-        <!-- Low P/E ratio definition -->
-        <section class="container row saver-container">
-            <div class="col-lg-5 col-sm-10 saver-text-box">
-                <p class="saver-text-head">PE Ratio</p>
-                <p class="saver-text">Price to earnings, or the P/E ratio, is the time tested benchmark of a well
-                    functioning company. It is calculated by taking the market cap of a company divided by its full year
-                    earnings.
-                    A low PE means that the company is undervalued while a high P/E often means that a
-                    company is over valued. However, this is only a gauge as there are many other factors to a good
-                    company.</p>
-            </div>
-        <!-- Examples of low PE stocks -->
-            <div class="col-lg-5 col-sm-10 saver-card">
-                <div class="card saver-card-main">
-                    <div class="card-body">
-                        <h5 class="card-title saver-card-header">Examples of low P/E stocks</h5>
-                        <p class="card-text">
-                        <ul>
-                            <li>ORCL - Oracle Corporation (16x)</li>
-                            <li>HD - Home Depot (22x)</li>
-                            <li>DAL - Delta Air Lines (4x)</li>
-                            <li>GM - General Motors Company (8x)</li>
-                            <li>AAPL - Apple Inc (24x)</li>
-                            <li>BAC - Bank of America Corp (11x)</li>
-                        </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- High Dividend stock definition -->
-        <section class="container row saver-container">
-            <div class="col-lg-5 col-sm-10 saver-text-box">
-                <p class="saver-text-head">Dividends</p>
-                <p class="saver-text">Cash is king. So it is even sweeter when your investment pays you a quarterly
-                    paycheck! Did you know that
-                    if you invest an initial sum of $10,000 and with an additional $10,000 topup every year, 4% P.A.
-                    compounded would be $615,000 in 30 years!
-                </p>
-            </div>
-        <!-- High dividend stocks examples -->
-            <div class="col-lg-5 col-sm-10 saver-card">
-                <div class="card saver-card-main">
-                    <div class="card-body">
-                        <h5 class="card-title saver-card-header">Examples of Dividend stocks</h5>
-                        <p class="card-text">
-                        <ul>
-                            <li>WFC - Wells Fargo & Company (6.74% P.A.)</li>
-                            <li>IBM - International Business Machines (5.43% P.A.)</li>
-                            <li>REG - Regency Centers (5.82% P.A.)</li>
-                            <li>T - AT&T Inc (6.88% P.A.)</li>
-                            <li>USB - US Bancorp (4.71% P.A.)</li>
-                        </ul>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer>
-        <div class="container-fluid footer">
-            <div>
-                <p class="footer-social-text">Find us on Social Media!</p>
-            </div>
-            <div>
-                <span><i class="fa fa-facebook-official" aria-hidden="true"></i></span>
-                <span><i class="fa fa-instagram" aria-hidden="true"></i></span>
-                <span><i class="fa fa-twitter" aria-hidden="true"></i></span>
-                <span><i class="fa fa-reddit" aria-hidden="true"></i></span>
-                <span><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
-            </div>
-        </div>
-    </footer>
+		<!-- Low P/E ratio definition -->
+		<section class="container row saver-container">
+			<div class="col-lg-5 col-sm-10 saver-text-box">
+				<p class="saver-text-head">PE Ratio</p>
+				<p class="saver-text">Price to earnings, or the P/E ratio, is the time tested benchmark of a well
+					functioning company. It is calculated by taking the market cap of a company divided by its full year
+					earnings.
+					A low PE means that the company is undervalued while a high P/E often means that a
+					company is over valued. However, this is only a gauge as there are many other factors to a good
+					company.</p>
+			</div>
+			<!-- Examples of low PE stocks -->
+			<div class="col-lg-5 col-sm-10 saver-card">
+				<div class="card saver-card-main">
+					<div class="card-body">
+						<h5 class="card-title saver-card-header">Examples of low P/E stocks</h5>
+						<p class="card-text">
+							<ul>
+								<li>ORCL - Oracle Corporation (16x)</li>
+								<li>HD - Home Depot (22x)</li>
+								<li>DAL - Delta Air Lines (4x)</li>
+								<li>GM - General Motors Company (8x)</li>
+								<li>AAPL - Apple Inc (24x)</li>
+								<li>BAC - Bank of America Corp (11x)</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- High Dividend stock definition -->
+		<section class="container row saver-container">
+			<div class="col-lg-5 col-sm-10 saver-text-box">
+				<p class="saver-text-head">Dividends</p>
+				<p class="saver-text">Cash is king. So it is even sweeter when your investment pays you a quarterly
+					paycheck! Did you know that
+					if you invest an initial sum of $10,000 and with an additional $10,000 topup every year, 4% P.A.
+					compounded would be $615,000 in 30 years!
+				</p>
+			</div>
+			<!-- High dividend stocks examples -->
+			<div class="col-lg-5 col-sm-10 saver-card">
+				<div class="card saver-card-main">
+					<div class="card-body">
+						<h5 class="card-title saver-card-header">Examples of Dividend stocks</h5>
+						<p class="card-text">
+							<ul>
+								<li>WFC - Wells Fargo & Company (6.74% P.A.)</li>
+								<li>IBM - International Business Machines (5.43% P.A.)</li>
+								<li>REG - Regency Centers (5.82% P.A.)</li>
+								<li>T - AT&T Inc (6.88% P.A.)</li>
+								<li>USB - US Bancorp (4.71% P.A.)</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- Footer -->
+	<footer>
+		<div class="container-fluid footer">
+			<div>
+				<p class="footer-social-text">Find us on Social Media!</p>
+			</div>
+			<div>
+				<span><i class="fa fa-facebook-official" aria-hidden="true"></i></span>
+				<span><i class="fa fa-instagram" aria-hidden="true"></i></span>
+				<span><i class="fa fa-twitter" aria-hidden="true"></i></span>
+				<span><i class="fa fa-reddit" aria-hidden="true"></i></span>
+				<span><i class="fa fa-youtube-play" aria-hidden="true"></i></span>
+			</div>
+		</div>
+	</footer>
 
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <!-- Axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
-    <!-- Animate on scroll library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <!-- my script -->
-    <script src="saverscript.js"></script>
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+	</script>
+	<!-- bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+	</script>
+	<!-- Axios -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+	<!-- Animate on scroll library -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-- Chart JS -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<!-- my script -->
+	<script src="saverscript.js"></script>
 </body>
 
 </html>

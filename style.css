@@ -6,6 +6,13 @@ body{
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
+
+.bg-image {
+    background-image: url(pictures/fire-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
 /* navbar stylings */
 #nav-logo img {
     height: 40px;
@@ -71,7 +78,7 @@ body{
 }
 
 .jumbo-bg {
-  background-color: rgba(166,166,166,0.3);
+  background-color: rgba(0,0,0,0.5);
   margin-bottom: 5%;
 }
 
@@ -298,6 +305,13 @@ hr {
     text-align: center;
 }
 
+/* Undecided page */
+
+.slider-color {
+    background-color: #fc6203 !important;
+}
+
+
 /* Grower page */
 
 #grower-bg {
@@ -505,7 +519,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(166,166,166,0.3);
+  background-color: rgba(0,0,0,0.7);
   border-radius: 25px;
   padding: 2%;
 }
@@ -583,7 +597,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(166,166,166,0.3);
+  background-color:  rgba(0,0,0,0.7);
   border-radius: 25px;
   padding: 2%;
   margin-top: 10%;
