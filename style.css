@@ -1,6 +1,5 @@
 /* main body styling */
 body{
-  background-color: black;
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -158,9 +157,6 @@ hr {
 }
 
 /* Saver page main container */
-#saver-bg {
-    background-color: black;
-}
 
 #saver-page-main {
   height: 10%;
@@ -313,10 +309,6 @@ hr {
 
 
 /* Grower page */
-
-#grower-bg {
-    background-color: black;
-}
 
 #grower-jumbo-text {
     color: #e62c2c;
