@@ -20,6 +20,9 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
         let growthRatePercent = (growthRate * 100).toFixed(2);
         let divYield = parseFloat(response.data.DividendYield);
         let divYieldInP = (divYield * 100).toFixed(2);
+        if (isNaN(divYieldInP)) {
+            divYieldInP = "Not Applicable"
+        };
         if (growthRatePercent <= 0) {
             fireRating = "Icy Cold"
         } else if (growthRatePercent < 5) {
@@ -47,10 +50,10 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
                     <div class="card-body row" id="grower-results-stock-info">
                         <div class="col-10 col-lg-5">
                             <ul>
-                                <li>Market cap: ${mktCapInB} B</li>
-                                <li>Dividend yield: ${divYieldInP} %</li>
-                                <li>Growth rate per quarter: ${growthRatePercent} %</li>
-                                <li>FIRE rating: ${fireRating}</li>
+                                <li>Market cap : ${mktCapInB} B</li>
+                                <li>Dividend yield (%) : ${divYieldInP} </li>
+                                <li>Growth rate per quarter (%) : ${growthRatePercent}</li>
+                                <li>FIRE rating : ${fireRating}</li>
                             </ul>
                         </div>
                     </div>
@@ -74,7 +77,7 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
                 <div class="card-header">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        ${response.data.Name}'s 12 Month Price Chart
+                        ${response.data.Name}'s 10 Month Price Chart
                     </button>
                 </h5>
                 </div>
@@ -88,43 +91,36 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
         `
         growerSearchDiv.innerHTML = growerResults
     });
-    let chartData = [];
+       let chartData = [];
+       let chartMonth = [];
     axios.get(newChartApiUrl).then(function (response) {
-        chartData.push(response.data["Monthly Time Series"]["2019-07-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-08-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-09-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-10-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-11-29"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2019-12-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-01-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-02-28"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-03-31"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-04-30"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-05-29"]["4. close"]);
-        chartData.push(response.data["Monthly Time Series"]["2020-06-30"]["4. close"]);
+        let resultCount= 0;
+        for (let [k, v] of Object.entries(response.data["Monthly Time Series"])) {
+            chartData.push(v["4. close"]);
+            chartMonth.push(k)
+            resultCount ++;
+            if (Object.keys(response.data["Monthly Time Series"]).length < 10) {
+                if (Object.keys(response.data["Monthly Time Series"]).length === resultCount){
+                break;
+                };
+            }else if(resultCount === 10){
+                break;
+            };
+        };
+
         let growerChart = document.getElementById('grower-search-results-chart').getContext('2d');
         let myChart = new Chart(growerChart, {
             type: 'line',
             data: {
-                labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+                labels: chartMonth.reverse(),
                 datasets: [{
-                    label: 'Months',
-                    data: [chartData[0], chartData[1], chartData[2], chartData[3], chartData[4], chartData[5], chartData[6], chartData[7], chartData[8], chartData[9], chartData[10], chartData[11]],
+                    label: '10 Month Stock Price',
+                    data: chartData.reverse(),
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
+                        'rgba(255, 99, 132, 0.2)'
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
+                        'rgba(255, 99, 132, 1)'
                     ],
                     borderWidth: 1
                 }],
@@ -132,4 +128,3 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
         });
     });
 });
-

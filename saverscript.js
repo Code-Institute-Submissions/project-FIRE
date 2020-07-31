@@ -52,10 +52,10 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                     <div class="card-body row" id="saver-results-stock-info">
                         <div class="col-10 col-lg-5">
                             <ul>
-                                <li>Market cap: ${mktCapInB} B</li>
-                                <li>Dividend yield: ${divYieldInP}%</li>
-                                <li>P/E ratio: ${peRatio}</li>
-                                <li>FIRE rating: ${fireRating}</li>
+                                <li>Market cap : ${mktCapInB} B</li>
+                                <li>Dividend yield (%) : ${divYieldInP}</li>
+                                <li>P/E ratio : ${peRatio}</li>
+                                <li>FIRE rating : ${fireRating}</li>
                             </ul>
                         </div>
                     </div>
