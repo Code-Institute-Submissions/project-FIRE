@@ -1,66 +1,99 @@
 // Questions to determine recommended stocks
 
-document.querySelector("#undecided-submit").addEventListener("click", function(){
-    let age_response = document.querySelector("#age_response").value;
-    let risk_response = document.querySelector("#risk_response").value;
-    let dependants_response = document.querySelector("#dependants_response").value;
-    let anxious_response = document.querySelector("#anxious_response").value;
-    let recommendation = ""
-    if (age_response == "below_18"){
+document.querySelector("#undecided-submit").addEventListener("click", function () {
+    let ageResponse = document.querySelector("#age_response").value;
+    let riskResponse = document.querySelector("#risk_response").value;
+    let dependantsResponse = document.querySelector("#dependants_response").value;
+    let anxiousResponse = document.querySelector("#anxious_response").value;
+    let recommendation = "";
+    let displayPic = "";
+    let displayLink = "";
+
+    // if input fields are empty
+
+    if (ageResponse == null || ageResponse == "", riskResponse == null || riskResponse == "", dependantsResponse == null || dependantsResponse == "", anxiousResponse == null || anxiousResponse == "") {
+        return;
+    };
+
+    // sort results by input field
+
+    if (ageResponse == "below_18") {
         recommendation = "100% Grower Stocks";
-        break;
-    }else if (age_response == "51_and_older"){
+        displayPic = "pictures/grower.jpg";
+        displayLink = "grower.html";
+    } else if (ageResponse == "51_and_older") {
         recommendation = "100% Saver Stocks";
-        break;
-    }else if(age_response != "below_18" && age_response != "51_and_older"){
-        if (risk_response == "low_risk"){
+        displayPic = "pictures/saver.jpg";
+        displayLink = "saver.html";
+    } else if (ageResponse == "18_to_30" && ageResponse == "31_to_50") {
+        if (riskResponse == "low_risk") {
             recommendation = "100% Saver Stocks";
-            break;
+            displayPic = "pictures/saver.jpg";
+            displayLink = "saver.html";
         };
-        if (risk_response == "high_risk"){
-            if (dependants_response == "no_dependants"){
-                if (anxious_response == "not_anxious"){
+        if (riskResponse == "high_risk") {
+            if (dependantsResponse == "no_dependants") {
+                if (anxiousResponse == "not_anxious") {
                     recommendation = "100% Grower Stocks";
-                    break;
+                    displayPic = "pictures/grower.jpg";
+                    displayLink = "grower.html";
                 };
-                if (anxious_response == "anxious"){
+                if (anxiousResponse == "anxious") {
                     recommendation = "30% Grower, 70% Saver";
-                    break;
+                    displayPic = "pictures/saver.jpg";
+                    displayLink = "saver.html";
                 };
             };
-            if (dependants_response == "have_dependants"){
-                if (anxious_response == "not_anxious"){
+            if (dependantsResponse == "have_dependants") {
+                if (anxiousResponse == "not_anxious") {
                     recommendation = "30% Saver, 70% Growth";
-                    break;
+                    displayPic = "pictures/grower.jpg";
+                    displayLink = "grower.html";
                 };
-                if (anxious_response == "anxious"){
+                if (anxiousResponse == "anxious") {
                     recommendation = "100% saver";
-                    break;
+                    displayPic = "pictures/saver.jpg";
+                    displayLink = "saver.html";
                 };
             };
         };
-        if (risk_response == "neutral"){
-            if (dependants_response == "no_dependants"){
-                if (anxious_response == "not_anxious"){
+        if (riskResponse == "neutral") {
+            if (dependantsResponse == "no_dependants") {
+                if (anxiousResponse == "not_anxious") {
                     recommendation = "100% Grower Stocks";
-                    break;
+                    displayPic = "pictures/grower.jpg";
+                    displayLink = "grower.html";
                 };
-                if (anxious_response == "anxious"){
+                if (anxiousResponse == "anxious") {
                     recommendation = "20% Grower, 80% Saver";
-                    break;
+                    displayPic = "pictures/saver.jpg";
+                    displayLink = "saver.html";
                 };
             };
-            if (dependants_response == "have_dependants"){
-                if (anxious_response == "not_anxious"){
+            if (dependantsResponse == "have_dependants") {
+                if (anxiousResponse == "not_anxious") {
                     recommendation = "40% Saver, 60% Grower";
-                    break;
+                    displayPic = "pictures/grower.jpg";
+                    displayLink = "grower.html";
                 };
-                if (anxious_response == "anxious"){
+                if (anxiousResponse == "anxious") {
                     recommendation = "100% saver";
-                    break;
+                    displayPic = "pictures/saver.jpg";
+                    displayLink = "saver.html";
                 };
             };
-        }
-    }
+        };
+    };
+    let undecidedResults = document.querySelector("#undecided-results");
+    let results = `
+        <div class="card teaser-card" id="results-card" style="width: 25rem;">
+            <div class="card-body">
+                <img class="card-img-top" src="${displayPic}" alt="Card image cap">
+                <h5 class="card-title card-text-header">We recommend ${recommendation}</h5>
+                <a href="${displayLink}" class="btn main-page-btn">Learn More</a>
+            </div>
+        </div>
+    `;
+    undecidedResults.innerHTML = results;
 });
 
