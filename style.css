@@ -77,8 +77,8 @@ body{
 /* Main page margin */
 
 #index-page-margin {
-    margin-top: 15%;
-    margin-bottom: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 /* jumbotron stylings */
@@ -122,24 +122,16 @@ hr {
 
 /* index page teaser */
 
-#center-of-page-card {
-  width: 100%;
-}
-
-#mainpage-teaser {
-  display: flex;
-  justify-content: space-around;
-}
-
 .card-body {
     padding: 0px !important;
 }
 
 .all-card {
   background-color: rgba(0,0,0,0.8) ;
-  min-height: 600px;
   border: 1px white solid;
-  margin-top: 5%;
+  margin-bottom: 5%;
+  max-width: 50%;
+  margin-left: 25%;
 }
 
 .card-text-header {
@@ -324,14 +316,6 @@ hr {
     background-color: #fc6203 !important;
     border: 1px black solid;
     box-shadow: 1px 1px black;
-}
-
-/* Undecided results */
-
-#results-card {
-  min-height: 600px;
-  border: 1px white solid;
-  background-color: rgba(0,0,0,0.8);
 }
 
 /* Grower page */
@@ -698,89 +682,24 @@ hr {
   padding: 0 7px 0 7px
 }
 
-/* ------------smallest phone size------------ */
-/* @media only screen and (max-width: 400px){
-  .navbar {
-    font-family: 'ZCOOL XiaoWei', serif;
-    z-index: 10;
-    width: 100%;
-    background-color: rgba(0,0,0,0.7);
-  }
-
-  #mainpage-teaser {
-    display: block;
-  }
-
-  .teaser-card {
-    width: 300px !important;
-  }
-  
-  #center-of-page-card {
-    display: flex;
-    justify-content: center;
-  }
-} */
-
-/* ------------laptop screen size------------ */
-
-/* @media only screen and (max-width: 1440px) {
-  #mainpagevideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-
-  .card-text-header {
-    font-family: 'ZCOOL XiaoWei', serif;
-    color: white;
-    font-size: 25px;
-    font-weight: bolder;
-  }
-  
-  .card-text-body {
-    padding-top: 20px;
-    color: white;
-    font-size: 15px;
-  }
-
-  .teaser-card {
-    min-height: 500px;
-  }
-} */
-
-/* ------------smaller laptop size------------ */
-
-@media only screen and (max-width: 1300px) {
-  #mainpagevideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-
-  #mainpage-teaser {
-    display: block;
-  }
-
-  .teaser-card {
-    max-height: 550px;
-    margin-top: 20px;
-  }
-  
-  #center-of-page-card {
-    display: flex;
-    justify-content: center;
-  }
-}
-
 /* about, grower, saver pages breakpoint at smaller screen sizes */
 
 @media only screen and (max-width: 1080px) {
+
+    /* index page */
+
+    #index-page-margin {
+        display: flex;
+        justify-content: center;
+    }
+
+    .all-card {
+        background-color: rgba(0,0,0,0.8) ;
+        max-height: 55%;
+        border: 1px white solid;
+        margin-left: 10%;
+        max-width: 80%;
+    }
     
     /* about page */
 
@@ -862,30 +781,8 @@ hr {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(166,166,166,0.5);
+        background-color: rgba(0,0,0,0.7);
         border-radius: 25px;
     }
-}
-/* ------------iphoneX size------------ */
-
-@media only screen and (max-width: 768px) {
-  #mainpagevideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
-
-  #mainpage-teaser {
-    display: block;
-  }
-
-  
-  #center-of-page-card {
-    display: flex;
-    justify-content: center;
-  }
 }
 
