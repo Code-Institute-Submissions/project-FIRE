@@ -338,7 +338,6 @@ hr {
   background-color: rgba(0,0,0,0.8);
 }
 
-
 /* Grower page */
 
 #grower-jumbo-text {
@@ -634,6 +633,10 @@ hr {
     max-width: 20% !important;
     border: 1px black solid;
     box-shadow: 1px 1px black;
+}
+
+#about-grower-link {
+    background-color: #e62c2c !important;
 }
 
 /* About FIRE My Approach  */
