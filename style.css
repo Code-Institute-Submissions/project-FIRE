@@ -32,6 +32,11 @@ body{
   font-size: 1em;
 }
 
+.nav-item a:hover {
+    text-decoration: none;
+    color: #fc6203 !important;
+}
+
 .navbar-toggler-icon {
   background-color: white;
   border-radius: 50%;
