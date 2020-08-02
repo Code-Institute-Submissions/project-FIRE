@@ -1,7 +1,7 @@
 /* main body styling */
 body{
-  margin: 0px;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
@@ -268,15 +268,12 @@ hr {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-}
-
-.saver-card-main {
-  border-radius: 0 25px 25px 0;
-  background-color: rgba(255,255,255,0.9);
-  width: 100%;
   height: 100%;
+  border-radius: 25px;
+  background-color: rgba(255,255,255,0.9);
   margin: 0;
 }
+
 
 .saver-text {
   text-align: center;
@@ -299,8 +296,8 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(166,166,166,0.5);
-  border-radius: 25px 0 0 25px;
+  background-color: rgba(0,0,0,0.7);
+  border-radius: 25px;
 }
 
 .card-text {
@@ -702,7 +699,7 @@ hr {
 }
 
 /* ------------smallest phone size------------ */
-@media only screen and (max-width: 400px){
+/* @media only screen and (max-width: 400px){
   .navbar {
     font-family: 'ZCOOL XiaoWei', serif;
     z-index: 10;
@@ -722,11 +719,11 @@ hr {
     display: flex;
     justify-content: center;
   }
-}
+} */
 
 /* ------------laptop screen size------------ */
 
-@media only screen and (max-width: 1440px) {
+/* @media only screen and (max-width: 1440px) {
   #mainpagevideo {
     position: fixed;
     right: 0;
@@ -752,7 +749,7 @@ hr {
   .teaser-card {
     min-height: 500px;
   }
-}
+} */
 
 /* ------------smaller laptop size------------ */
 
@@ -784,6 +781,9 @@ hr {
 /* about, grower, saver pages breakpoint at smaller screen sizes */
 
 @media only screen and (max-width: 1080px) {
+    
+    /* about page */
+
     #about-jumbo-buttons {
         display: block;
         justify-content: center;
@@ -800,6 +800,16 @@ hr {
         box-shadow: 1px 1px black;
     }
 
+    /* saver page */
+
+    #saver-undecided-text {
+        font-family: 'ZCOOL XiaoWei', serif;
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: #fc6203;
+        text-shadow: 3px 3px black;
+    }
+
     #saver-search-container {
         min-height: 40%;
         display: block;
@@ -807,6 +817,7 @@ hr {
     } 
 
     #saver-search-text {
+        margin-left: 20px;
         display: flex;
         justify-content: center;
         min-width: 50%;
@@ -836,6 +847,22 @@ hr {
         font-weight: bolder;
         font-size: 15px;
         padding: 10px;
+        border-radius: 25px;
+    }
+
+    .saver-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 25px;
+        background-color: rgba(255,255,255,0.9);
+    }
+
+    .saver-text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(166,166,166,0.5);
         border-radius: 25px;
     }
 }
