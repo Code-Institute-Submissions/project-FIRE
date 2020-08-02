@@ -168,12 +168,6 @@ hr {
   border: 1px black solid;
 }
 
-/* Saver page main container */
-
-#saver-page-main {
-  height: 10%;
-}
-
 /* Saver page undecided text */
 #saver-undecided-box {
   text-align: center;
@@ -787,6 +781,64 @@ hr {
   }
 }
 
+/* about, grower, saver pages breakpoint at smaller screen sizes */
+
+@media only screen and (max-width: 1080px) {
+    #about-jumbo-buttons {
+        display: block;
+        justify-content: center;
+        margin: 5% 17% 0 17%;
+    }
+
+    .about-jumbo-btn {
+        min-width: 60%;
+        color: black;
+        font-weight: bold;
+        background-color: #fc6203 !important;
+        margin: 2% 25% 0 25%;
+        border: 1px black solid;
+        box-shadow: 1px 1px black;
+    }
+
+    #saver-search-container {
+        min-height: 40%;
+        display: block;
+        margin: 5% 0 0 0;
+    } 
+
+    #saver-search-text {
+        display: flex;
+        justify-content: center;
+        min-width: 50%;
+        color: white;
+        font-weight: Bolder;
+        font-size: 20px;
+        text-shadow: 4px 4px black;
+    }
+
+    #saver-search {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 25px;
+        border: 3px black solid;
+        padding: 10px;
+        box-shadow: black 2px 2px;
+    }
+
+    #saver-search-btn {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 2%;
+        background-color: #fc6203;
+        color: white;
+        font-weight: bolder;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 25px;
+    }
+}
 /* ------------iphoneX size------------ */
 
 @media only screen and (max-width: 768px) {
