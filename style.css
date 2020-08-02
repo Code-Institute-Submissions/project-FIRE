@@ -784,5 +784,71 @@ hr {
         background-color: rgba(0,0,0,0.7);
         border-radius: 25px;
     }
+
+    /* Grower page */
+
+    #grower-undecided-text {
+        font-family: 'ZCOOL XiaoWei', serif;
+        font-size: 1.5em;
+        font-weight: bolder;
+        color: #e62c2c;
+        text-shadow: 3px 3px black;
+    }
+
+    #grower-search-container {
+        min-height: 40%;
+        display: block;
+        margin: 5% 0 0 0;
+    } 
+
+    #grower-search-text {
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        min-width: 50%;
+        color: white;
+        font-weight: Bolder;
+        font-size: 20px;
+        text-shadow: 4px 4px black;
+    }
+
+    #grower-search {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 25px;
+        border: 3px black solid;
+        padding: 10px;
+        box-shadow: black 2px 2px;
+    }
+
+    #grower-search-btn {
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-top: 2%;
+        background-color: #e62c2c;
+        color: white;
+        font-weight: bolder;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .grower-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 25px;
+        background-color: rgba(255,255,255,0.9);
+    }
+
+    .grower-text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.7);
+        border-radius: 25px;
+    }
 }
 
