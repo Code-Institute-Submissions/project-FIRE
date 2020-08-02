@@ -131,7 +131,6 @@ hr {
 }
 
 .all-card {
-  position: relative;
   background-color: rgba(0,0,0,0.8) ;
   min-height: 600px;
   border: 1px white solid;
@@ -338,6 +337,7 @@ hr {
   border: 1px white solid;
   background-color: rgba(0,0,0,0.8);
 }
+
 
 /* Grower page */
 
