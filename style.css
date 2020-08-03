@@ -14,21 +14,6 @@ body{
 }
 /* navbar stylings */
 
-#navbarNav {
-    background-color:  rgba(0,0,0,0.9);
-    height: 100vh;
-}
-
-#navbarNav .nav-item {
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-#navbarNav .last-nav-link {
-    margin: 0;
-}
-
 #nav-logo img {
     height: 40px;
 }
@@ -673,10 +658,6 @@ hr {
 
 /* Contact Us */
 
-#contact-us-jumbo-text {
-
-}
-
 /* Footer */
 
 .footer {
@@ -867,6 +848,23 @@ hr {
         justify-content: center;
         background-color: rgba(0,0,0,0.7);
         border-radius: 25px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    #navbarNav {
+        background-color:  rgba(0,0,0,0.9);
+        height: 100vh;
+    }
+
+#navbarNav .nav-item {
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+#navbarNav .last-nav-link {
+        margin: 0;
     }
 }
 
