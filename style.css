@@ -718,6 +718,14 @@ hr {
         box-shadow: 1px 1px black;
     }
 
+    #about-saver-link a {
+        text-align: center;
+    }
+
+    #about-grower-link a {
+        text-align: center !important;
+    }
+
     /* saver page */
 
     #saver-undecided-text {
