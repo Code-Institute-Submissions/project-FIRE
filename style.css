@@ -122,6 +122,12 @@ hr {
   text-align: center;
 }
 
+#disclaimer-text {
+    color: #e62c2c;
+    margin-top: 2%;
+    font-weight: bold;
+}
+
 /* index page teaser */
 
 #center-of-page-card {
