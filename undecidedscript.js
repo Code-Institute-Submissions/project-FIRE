@@ -98,7 +98,7 @@ document.querySelector("#undecided-submit").addEventListener("click", function (
     };
     let undecidedResults = document.querySelector("#undecided-results");
     let results = `<br><br>
-        <div class="card all-card">
+        <div class="card all-card" id="undecided-card">
             <div class="card-body">
                 <img class="card-img-top" src="${displayPic}" alt="Card image cap">
                 <h5 class="card-title card-text-header">We recommend ${recommendation}</h5>

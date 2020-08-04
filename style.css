@@ -11,6 +11,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
+    min-height: 115vh;
 }
 /* navbar stylings */
 
@@ -149,7 +150,7 @@ hr {
 .card-text-body {
   color: white;
   font-size: 1.2em;
-  padding: 5% 0 25% 0;
+  padding: 5% 5% 25% 5%;
 }
 
 .main-page-btn {
@@ -320,6 +321,15 @@ hr {
     background-color: #fc6203 !important;
     border: 1px black solid;
     box-shadow: 1px 1px black;
+}
+
+#undecided-results {
+    margin-bottom: 15%;
+}
+
+#undecided-card {
+    width: 50% !important;
+    margin-left: 25%;
 }
 
 /* Grower page */
@@ -883,3 +893,10 @@ hr {
     }
 }
 
+@media only screen and (min-height: 1366px) {
+    #undecided-footer-ipad {
+        position: fixed;
+        bottom: 0;
+        margin-top: 10%;
+    }
+}
