@@ -1,9 +1,11 @@
 # 🔥 The FIRE Project 🔥
 
+
 ```
 Welcome To FIRE 🔥, the website designed specially for beginners to jump start their Financial Independence, Retire Early journey.
 
 ```
+
 
 # User Stories ☺️
 
@@ -35,6 +37,7 @@ As the user of the website, I hope to:
     
 ```
 
+
 # UX Design 🎯
 
 ```
@@ -59,6 +62,7 @@ Information architecture :
        the button is an external link to the community page.
 
 ```
+
 
 # Features 📑
 
@@ -101,6 +105,7 @@ Information architecture :
 ### Features left to implement
 
 ```
+
     1. Saver and Grower pages:
     
         - A button that allows the user to compares 2 stocks.
@@ -111,4 +116,67 @@ Information architecture :
         - Built in video player that plays the explaination of the respective jargons.
 
 ```
+
+
+# Technologies Used 💻
+
+```
+
+HTML:
+
+    - Link: https://html.com/
+    - Used as the backbone of the website that users see.
+
+CSS:
+
+    - Link: https://www.w3.org/Style/CSS/Overview.en.html
+    - Used to style the website that users see.
+
+JAVASCRIPT:
+
+    - Link: https://www.javascript.com/
+    - Used to write logic statements and DOM manipulation.
+
+BootStrap4:
+
+    - Link: https://getbootstrap.com/
+    - Used to create a mobile responsive site.
+    - Used grid system to make the website look tidy.
+
+FontAwesome4:
+
+    - Link: https://fontawesome.com/v4.7.0/
+    - Used to add in social media icons.
+
+JQuery:
+
+    - Link: https://jquery.com/
+    - Used to query elements from HTML.
+
+ChartJS:
+
+    - Link: https://www.chartjs.org/
+    - Used to create stock chart.
+
+Axios:
+    
+    - Link: https://github.com/axios/axios
+    - Used to get response from API links.
+
+Alpha Vantage API:
+    
+    - Link: https://www.alphavantage.co/
+    - Used to get stock quotes and stock data.
+    
+```
+    
+
+
+
+
+
+
+
+
+
 
