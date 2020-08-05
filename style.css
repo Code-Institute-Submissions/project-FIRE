@@ -6,6 +6,10 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+.btn:hover {
+    background-color: white !important;
+}
+
 .hr-black {
     border: 0.5px black solid;
 }
@@ -348,6 +352,10 @@ hr {
     background-color: #fc6203 !important;
     border: 1px black solid;
     box-shadow: 1px 1px black;
+}
+
+#undecided-submit:hover {
+    background-color: white !important;
 }
 
 #undecided-results {
@@ -759,6 +767,11 @@ hr {
   color: white;
   padding: 0 7px 0 7px
 }
+
+.fa-hover:hover {
+    color : #fc6203 !important;
+}
+
 
 /* about, grower, saver pages breakpoint at smaller screen sizes */
 
