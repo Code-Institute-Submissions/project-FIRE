@@ -22,7 +22,7 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         let divYieldInP = (divYield * 100).toFixed(2);
         let peRatio = parseFloat(response.data.PERatio).toFixed(2)
         let fireTextColor = "";
-        if (searchInput == "" || searchInput != response.data.Symbol) {
+        if (searchInput == "" || searchInput.toUpperCase() != response.data.Symbol) {
             alert ("Please Enter a Valid Ticker Symbol!")
             return
         };
