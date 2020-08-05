@@ -6,6 +6,10 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+.hr-black {
+    border: 0.5px black solid;
+}
+
 ul {
     list-style-position: inside;
 }
