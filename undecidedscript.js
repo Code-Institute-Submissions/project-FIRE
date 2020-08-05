@@ -12,6 +12,7 @@ document.querySelector("#undecided-submit").addEventListener("click", function (
     let displayText = "";
     // if input fields are empty
     if (ageResponse == null || ageResponse == "", riskResponse == null || riskResponse == "", dependantsResponse == null || dependantsResponse == "", anxiousResponse == null || anxiousResponse == "") {
+        alert("Please select all fields!")
         return;
     }else{
     // sort results by input field
