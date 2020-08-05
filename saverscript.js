@@ -50,6 +50,19 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
 
                 <div id="collapseOne" class="collapse show container-fluid" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body row" id="saver-results-stock-info">
+                        <div class="container">
+                            <p>FIRE rating is based on ${response.data.Name}'s P/E ratio because that is the time tested 
+                            indicator of a stable company.</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li>Firey HOT! : P/E ratio of 20 or less.</li>
+                                <li>HOT! : P/E ratio of 20 to 29.</li>
+                                <li>Warm : P/E ratio of 30 to 49</li>
+                                <li>Cold : P/E ratio of 50 to 99</li>
+                                <li>Icy Cold : P/E ratio of 100 and above.</li>
+                            </ul>
+                        </div>
                         <div class="col-10 col-lg-5">
                             <ul>
                                 <li>Market cap : ${mktCapInB} B</li>
@@ -96,16 +109,16 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
     let chartData = [];
     let chartMonth = [];
     axios.get(newChartApiUrl).then(function (response) {
-        let resultCount= 0;
+        let resultCount = 0;
         for (let [k, v] of Object.entries(response.data["Monthly Time Series"])) {
             chartData.push(v["4. close"]);
             chartMonth.push(k)
-            resultCount ++;
+            resultCount++;
             if (Object.keys(response.data["Monthly Time Series"]).length < 10) {
-                if (Object.keys(response.data["Monthly Time Series"]).length === resultCount){
-                break;
+                if (Object.keys(response.data["Monthly Time Series"]).length === resultCount) {
+                    break;
                 };
-            }else if(resultCount === 10){
+            } else if (resultCount === 10) {
                 break;
             };
         };

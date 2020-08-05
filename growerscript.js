@@ -45,9 +45,21 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
                         </button>
                     </h5>
                 </div>
-
                 <div id="collapseOne" class="collapse show container-fluid" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body row" id="grower-results-stock-info">
+                        <div class="container">
+                            <p>FIRE rating is based on ${response.data.Name}'s P/E ratio because that is the time tested 
+                            indicator of a stable company.</p>
+                        </div>
+                    <div>
+                        <ul>
+                            <li>Firey HOT! : P/E ratio of 20 or less.</li>
+                            <li>HOT! : P/E ratio of 20 to 29.</li>
+                            <li>Warm : P/E ratio of 30 to 49</li>
+                            <li>Cold : P/E ratio of 50 to 99</li>
+                            <li>Icy Cold : P/E ratio of 100 and above.</li>
+                        </ul>
+                </div>
                         <div class="col-10 col-lg-5">
                             <ul>
                                 <li>Market cap : ${mktCapInB} B</li>
