@@ -23,6 +23,10 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
         let divYield = parseFloat(response.data.DividendYield);
         let divYieldInP = (divYield * 100).toFixed(2);
         let fireTextColor = "";
+        if (searchInput == "" || searchInput != response.data.Symbol) {
+            alert ("Please Enter a Valid Ticker Symbol!")
+            return
+        };
         if (isNaN(divYieldInP)) {
             divYieldInP = "Not Applicable"
         };
