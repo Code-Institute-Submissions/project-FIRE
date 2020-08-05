@@ -2,6 +2,7 @@
 
 
 ```
+
 Welcome To FIRE 🔥, the website designed specially for beginners to jump start their Financial Independence, Retire Early journey.
 
 ```
@@ -135,7 +136,7 @@ CSS:
 JAVASCRIPT:
 
     - Link: https://www.javascript.com/
-    - Used to write logic statements and DOM manipulation.
+    - Used to write logic statements and simplify DOM manipulation.
 
 BootStrap4:
 
@@ -169,7 +170,36 @@ Alpha Vantage API:
     - Used to get stock quotes and stock data.
     
 ```
-    
+
+# Testing
+
+##### All testing were made manually, no automated testing was implemented.
+
+```
+
+In depth testing file:  
+
+```
+
+# Deployment
+
+##### Steps I took to deploy my project
+
+```
+
+1. Login to GitHub.
+2. Click on my repository.
+3. Select project-FIRE.
+4. Locate settings tab in the grey background section under the navbar. Settings icon looks like a gear.
+5. Click on settings.
+6. You will be transported to the settings page.
+7. Scroll down to the second last section and locate GitHub Pages.
+8. The first line should read "Source". Click the button below it named branch and select master.
+9. You are now on the master branch and your website is ready to be published.
+10. It should be published in a few minutes.
+10. Done! My website is now online! Website live server link: https://liuzhenxin2.github.io/project-FIRE/
+
+```
 
 
 
