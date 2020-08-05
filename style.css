@@ -320,7 +320,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   border-radius: 25px;
 }
 
@@ -496,7 +496,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   border-radius: 25px;
 }
 
@@ -558,7 +558,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   border-radius: 25px;
   padding: 2%;
 }
@@ -636,7 +636,7 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color:  rgba(0,0,0,0.7);
+  background-color:  rgba(0,0,0,0.8);
   border-radius: 25px;
   padding: 2%;
   margin-top: 10%;
@@ -711,6 +711,10 @@ hr {
     font-size: 5em !important;
 }
 
+.fa-large:hover {
+    color : #fc6203 !important;
+}
+
 .contact-fire-text {
   text-align: center;
   color: white;
@@ -720,7 +724,7 @@ hr {
 }
 
 .contact-fire-box {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.8);
   border-radius: 25px;
   padding: 2%;
 }
@@ -867,7 +871,7 @@ hr {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.8);
         border-radius: 25px;
     }
 
@@ -933,7 +937,7 @@ hr {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.8);
         border-radius: 25px;
     }
 }
