@@ -1,10 +1,12 @@
-// mainpage video playback speed
-
-// document.querySelector("#mainpagevideo").playbackRate = 0.7
+// Alpha vantage stocks info Api URL
 
 let apiUrl = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=msft&apikey=486OHSPRRLZR5IJI';
 
+// Alpha vantage Api monthly stock price URL
+
 let chartApiUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=tsla&apikey=486OHSPRRLZR5IJI';
+
+// Saver search button click
 
 document.querySelector('#saver-search-btn').addEventListener('click', function () {
     searchInput = document.querySelector('#saver-search').value;
@@ -20,6 +22,10 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         let divYieldInP = (divYield * 100).toFixed(2);
         let peRatio = parseFloat(response.data.PERatio).toFixed(2)
         let fireTextColor = "";
+        if (searchInput == "" || searchInput != response.data.Symbol) {
+            alert ("Please Enter a Valid Ticker Symbol!")
+            return
+        };
         if (isNaN(peRatio)) {
             peRatio = "Not Applicable"
         }
@@ -43,6 +49,9 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
             fireTextColor = "#78b6db"
         };
         let saverSearchDiv = document.querySelector("#saver-search-results");
+
+        // search results formatted
+
         let saverResults = `
         <div id="accordion">
             <div class="card">
@@ -112,6 +121,9 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         `
         saverSearchDiv.innerHTML = saverResults
     });
+
+    // 10 month chart created with chartJS
+
     let chartData = [];
     let chartMonth = [];
     axios.get(newChartApiUrl).then(function (response) {
