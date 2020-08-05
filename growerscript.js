@@ -1,10 +1,12 @@
-// mainpage video playback speed
-
-// document.querySelector("#mainpagevideo").playbackRate = 0.7
+// Alpha vantage stock info API URL
 
 let apiUrl = 'https://www.alphavantage.co/query?function=OVERVIEW&symbol=msft&apikey=486OHSPRRLZR5IJI';
 
+// alpha vantage monthly stock price data API URL
+
 let chartApiUrl = 'https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=tsla&apikey=486OHSPRRLZR5IJI';
+
+// grower search button click
 
 document.querySelector('#grower-search-btn').addEventListener('click', function () {
     searchInput = document.querySelector('#grower-search').value;
@@ -41,6 +43,9 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
             fireTextColor = "#e62c2c"
         };
         let growerSearchDiv = document.querySelector("#grower-search-results");
+
+        // grower search results formatted
+
         let growerResults = `
         <div id="accordion">
             <div class="card">
@@ -110,6 +115,9 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
         `
         growerSearchDiv.innerHTML = growerResults
     });
+
+    // 10 month stock chart made with chartJS
+
        let chartData = [];
        let chartMonth = [];
     axios.get(newChartApiUrl).then(function (response) {

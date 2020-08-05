@@ -97,6 +97,9 @@ document.querySelector("#undecided-submit").addEventListener("click", function (
         };
     };
     let undecidedResults = document.querySelector("#undecided-results");
+
+    // formatted undecided results
+
     let results = `<br><br>
         <div class="card all-card" id="undecided-card">
             <div class="card-body">
