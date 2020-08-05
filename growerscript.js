@@ -53,19 +53,21 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
                         </div>
                     <div>
                         <ul>
+                            <p><h3>FIRE ratings Legend:</h3></p>
                             <li>Firey HOT! : P/E ratio of 20 or less.</li>
                             <li>HOT! : P/E ratio of 20 to 29.</li>
                             <li>Warm : P/E ratio of 30 to 49</li>
                             <li>Cold : P/E ratio of 50 to 99</li>
                             <li>Icy Cold : P/E ratio of 100 and above.</li>
                         </ul>
-                </div>
-                        <div class="col-10 col-lg-5">
+                    </div><br>
+                    <hr class="show-hr">
+                        <div class="col-10 col-lg-5"><br>
                             <ul>
-                                <li>Market cap : ${mktCapInB} B</li>
-                                <li>Dividend yield (%) : ${divYieldInP} </li>
-                                <li>Growth rate per quarter (%) : ${growthRatePercent}</li>
-                                <li>FIRE rating : ${fireRating}</li>
+                                <li><strong>Market cap : ${mktCapInB} B</strong></li>
+                                <li><strong>Dividend yield (%) : ${divYieldInP} </strong></li>
+                                <li><strong>Growth rate per quarter (%) : ${growthRatePercent}</strong></li>
+                                <li><strong>FIRE rating : ${fireRating}</strong></li>
                             </ul>
                         </div>
                     </div>

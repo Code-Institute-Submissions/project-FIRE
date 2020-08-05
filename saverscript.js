@@ -54,21 +54,23 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
                             <p>FIRE rating is based on ${response.data.Name}'s P/E ratio because that is the time tested 
                             indicator of a stable company.</p>
                         </div>
-                        <div>
-                            <ul>
+                        <div class="col-12">
+                            <ul class=" text-left">
+                                <p><strong>FIRE ratings Legend:</strong></p>
                                 <li>Firey HOT! : P/E ratio of 20 or less.</li>
                                 <li>HOT! : P/E ratio of 20 to 29.</li>
                                 <li>Warm : P/E ratio of 30 to 49</li>
                                 <li>Cold : P/E ratio of 50 to 99</li>
                                 <li>Icy Cold : P/E ratio of 100 and above.</li>
                             </ul>
-                        </div>
-                        <div class="col-10 col-lg-5">
-                            <ul>
-                                <li>Market cap : ${mktCapInB} B</li>
-                                <li>Dividend yield (%) : ${divYieldInP}</li>
-                                <li>P/E ratio : ${peRatio}</li>
-                                <li>FIRE rating : ${fireRating}</li>
+                        </div><br>
+                        <hr class="show-hr">
+                        <div class="col-12"><br>
+                            <ul class=" text-left">
+                                <li><strong>Market cap : ${mktCapInB} B</strong></li>
+                                <li><strong>Dividend yield (%) : ${divYieldInP}</strong></li>
+                                <li><strong>P/E ratio : ${peRatio}</strong></li>
+                                <li><strong>FIRE rating : ${fireRating}</strong></li>
                             </ul>
                         </div>
                     </div>

@@ -6,6 +6,15 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
 .bg-image {
     background-image: url(pictures/fire-background.jpg);
     background-size: cover;
@@ -236,6 +245,7 @@ hr {
     padding: 3% !important;
     background-color: rgba(166,166,166,0.5);
     margin-top: 0px !important;
+    text-align: left;
 }
 
 #saver-search-results-description {
@@ -301,6 +311,10 @@ hr {
   justify-content: center;
   background-color: rgba(0,0,0,0.7);
   border-radius: 25px;
+}
+
+.show-hr {
+    display: none;
 }
 
 .card-text {
