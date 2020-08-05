@@ -20,19 +20,25 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
         let growthRatePercent = (growthRate * 100).toFixed(2);
         let divYield = parseFloat(response.data.DividendYield);
         let divYieldInP = (divYield * 100).toFixed(2);
+        let fireTextColor = "";
         if (isNaN(divYieldInP)) {
             divYieldInP = "Not Applicable"
         };
         if (growthRatePercent <= 0) {
             fireRating = "Icy Cold"
+            fireTextColor = "#78b6db"
         } else if (growthRatePercent < 5) {
             fireRating = "Cold"
+            fireTextColor = "#78b6db"
         } else if (growthRatePercent < 10) {
             fireRating = "Warm"
+            fireTextColor = "#fc6203"
         } else if (growthRatePercent < 20) {
             fireRating = "Hot"
+            fireTextColor = "#e62c2c"
         } else {
             fireRating = "Fiery Hot!"
+            fireTextColor = "#e62c2c"
         };
         let growerSearchDiv = document.querySelector("#grower-search-results");
         let growerResults = `
@@ -40,34 +46,33 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         ${response.data.Name}'s Stock Information
                         </button>
                     </h5>
                 </div>
                 <div id="collapseOne" class="collapse show container-fluid" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body row" id="grower-results-stock-info">
-                        <div class="container">
-                            <p>FIRE rating is based on ${response.data.Name}'s P/E ratio because that is the time tested 
-                            indicator of a stable company.</p>
-                        </div>
-                    <div>
-                        <ul>
-                            <p><h3>FIRE ratings Legend:</h3></p>
-                            <li>Firey HOT! : P/E ratio of 20 or less.</li>
-                            <li>HOT! : P/E ratio of 20 to 29.</li>
-                            <li>Warm : P/E ratio of 30 to 49</li>
-                            <li>Cold : P/E ratio of 50 to 99</li>
-                            <li>Icy Cold : P/E ratio of 100 and above.</li>
-                        </ul>
-                    </div><br>
-                    <hr class="show-hr">
-                        <div class="col-10 col-lg-5"><br>
-                            <ul>
+                        <div class="container-fluid">
+                            <p><h4 class="red-text">FIRE rating is based on ${response.data.Name}'s growth rate because growth is the 
+                            most important factor of a growth company.</h4></p>
+                        </div><br><br>
+                        <div class="col-12">
+                            <ul class=" text-left">
+                                <p><strong>FIRE ratings Legend:</strong></p>
+                                <li>Firey HOT! : Growth rate of 20% and higher.</li>
+                                <li>HOT! : Growth rate of 10% to 19%.</li>
+                                <li>Warm : Growth rate of 5% to 9%.</li>
+                                <li>Cold : Growth rate of 1% to 4%.</li>
+                                <li>Icy Cold : Negative or 0 growth rate.</li>
+                            </ul>
+                        </div><br>
+                        <div class="col-12"><br>
+                            <ul class=" text-left">
                                 <li><strong>Market cap : ${mktCapInB} B</strong></li>
-                                <li><strong>Dividend yield (%) : ${divYieldInP} </strong></li>
-                                <li><strong>Growth rate per quarter (%) : ${growthRatePercent}</strong></li>
-                                <li><strong>FIRE rating : ${fireRating}</strong></li>
+                                <li><strong>Growth rate (%) : ${growthRatePercent}</strong></li>
+                                <li><strong>Dividend Yield (%) : ${divYieldInP}</strong></li>
+                                <li><strong style="color:${fireTextColor};">FIRE rating : ${fireRating}</strong></li>
                             </ul>
                         </div>
                     </div>
@@ -75,11 +80,11 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
             </div>
             <div class="card">
                 <div class="card-header">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        ${response.data.Name}'s Summary
-                    </button>
-                </h5>
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ${response.data.Name}'s Summary
+                        </button>
+                    </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div id="grower-search-results-description">
@@ -89,11 +94,11 @@ document.querySelector('#grower-search-btn').addEventListener('click', function 
             </div>
             <div class="card">
                 <div class="card-header">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        ${response.data.Name}'s 10 Month Price Chart
-                    </button>
-                </h5>
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ${response.data.Name}'s 10 Month Price Chart
+                        </button>
+                    </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <canvas id="grower-search-results-chart">

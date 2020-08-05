@@ -19,6 +19,7 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         let divYield = parseFloat(response.data.DividendYield);
         let divYieldInP = (divYield * 100).toFixed(2);
         let peRatio = parseFloat(response.data.PERatio).toFixed(2)
+        let fireTextColor = "";
         if (isNaN(peRatio)) {
             peRatio = "Not Applicable"
         }
@@ -27,14 +28,19 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
         }
         if (peRatio < 20) {
             fireRating = "Firey Hot!"
+            fireTextColor = "#e62c2c"
         } else if (peRatio < 30) {
             fireRating = "Hot!"
+            fireTextColor = "#e62c2c"
         } else if (peRatio < 50) {
             fireRating = "Warm"
+            fireTextColor = "#fc6203"
         } else if (peRatio < 100) {
             fireRating = "Cold"
+            fireTextColor = "#78b6db"
         } else {
             fireRating = "Icy Cold"
+            fireTextColor = "#78b6db"
         };
         let saverSearchDiv = document.querySelector("#saver-search-results");
         let saverResults = `
@@ -42,35 +48,33 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
             <div class="card">
                 <div class="card-header">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         ${response.data.Name}'s Stock Information
                         </button>
                     </h5>
                 </div>
-
                 <div id="collapseOne" class="collapse show container-fluid" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body row" id="saver-results-stock-info">
-                        <div class="container">
-                            <p>FIRE rating is based on ${response.data.Name}'s P/E ratio because that is the time tested 
-                            indicator of a stable company.</p>
-                        </div>
+                        <div class="container-fluid">
+                            <p><h4 class="orange-text">FIRE rating is based on ${response.data.Name}'s PE ratio because it is a 
+                            time tested measure of a stable and profitable company.</h4></p>
+                        </div><br><br>
                         <div class="col-12">
                             <ul class=" text-left">
                                 <p><strong>FIRE ratings Legend:</strong></p>
-                                <li>Firey HOT! : P/E ratio of 20 or less.</li>
-                                <li>HOT! : P/E ratio of 20 to 29.</li>
-                                <li>Warm : P/E ratio of 30 to 49</li>
-                                <li>Cold : P/E ratio of 50 to 99</li>
-                                <li>Icy Cold : P/E ratio of 100 and above.</li>
+                                <li>Firey HOT! : PE ratio below 20.</li>
+                                <li>HOT! : PE ratio from 20 to 29.</li>
+                                <li>Warm : PE ratio from 30 to 49</li>
+                                <li>Cold : PE ratio from 50 to 99</li>
+                                <li>Icy Cold : PE ratio above 100.</li>
                             </ul>
                         </div><br>
-                        <hr class="show-hr">
                         <div class="col-12"><br>
                             <ul class=" text-left">
                                 <li><strong>Market cap : ${mktCapInB} B</strong></li>
-                                <li><strong>Dividend yield (%) : ${divYieldInP}</strong></li>
-                                <li><strong>P/E ratio : ${peRatio}</strong></li>
-                                <li><strong>FIRE rating : ${fireRating}</strong></li>
+                                <li><strong>PE Ratio : ${peRatio}</strong></li>
+                                <li><strong>Dividend Yield (%) : ${divYieldInP}</strong></li>
+                                <li><strong style="color:${fireTextColor};">FIRE rating : ${fireRating}</strong></li>
                             </ul>
                         </div>
                     </div>
@@ -78,25 +82,25 @@ document.querySelector('#saver-search-btn').addEventListener('click', function (
             </div>
             <div class="card">
                 <div class="card-header">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    ${response.data.Name}'s Summary
-                    </button>
-                </h5>
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ${response.data.Name}'s Summary
+                        </button>
+                    </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div id="saver-search-results-description">
-                ${response.data.Description}
-                </div>
+                    <div id="saver-search-results-description">
+                        ${response.data.Description}
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header">
-                <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    ${response.data.Name}'s 10 Month Price Chart
-                    </button>
-                </h5>
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            ${response.data.Name}'s 10 Month Price Chart
+                        </button>
+                    </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <canvas id="saver-search-results-chart">
