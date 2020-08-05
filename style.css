@@ -664,6 +664,10 @@ hr {
     background-color: #e62c2c !important;
 }
 
+#about-grower-link:hover {
+    background-color: white !important; 
+}
+
 /* About FIRE My Approach  */
 
 .my-approach-fire-card {
