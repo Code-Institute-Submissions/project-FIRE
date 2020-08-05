@@ -66,28 +66,49 @@ Information architecture :
 
 ```
     1. Navigation Bar:
+    
         - Fully linked to all pages from all pages.
         - User is able to navigate the website without the use of browser back button.
         - Able to go back to the index page by clicking on the FIRE logo.
     
     2. Footer:
+    
         - Social media icons changes color on hover.
         - Social media icons links to respective external sites.
     
     3. Buttons:
+    
         - Buttons turns white on hover.
         - Buttons links to their respective locations.
     
     4. Saver and Grower page search bars:
+    
         - Displays stocks information in an accordian.
         - All information including line chart is real time.
+        - If their stock ticker symbol cannot be found, an alert pops out notifying the user.
+        - The FIRE rating is color coded E.G Firey HOT! rating will render the text red while
+          Icy Cold will render the text sky blue. This is responsive to the results that is
+          queried from the database in realtime.
     
     5. Undecided page:
+    
         - Every selection has a corresponding unique outcome.
         - Buttons that spawns from the results are linked to their respective pages.
+        - If any field is unselected, an alert pops out notifying the user.
         
 ```
 
+### Features left to implement
 
+```
+    1. Saver and Grower pages:
+    
+        - A button that allows the user to compares 2 stocks.
+        - A list of checkboxes that allows the user to filter their search results by industry.
+    
+    2. About page:
+        
+        - Built in video player that plays the explaination of the respective jargons.
 
+```
 
