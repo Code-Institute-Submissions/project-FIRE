@@ -46,10 +46,48 @@ Information architecture :
     2. The navigation links allows the user to browse through each choice easily. The navigation links are also 
        available on every page.
     
-
-
-
-
-
+    3. The About page has 5 very distinct orange same-page navigation buttons for users to navigate easily to their
+       desired article. Each article section is also separated with distinctive boxes enveloping them.
+       In the 2 main approaches article, there are 2 buttons designated for user to have ease of access to saver and grower page.
+     
+    4. The search bar and button on the grower and saver pages are big and obvious for users to extract the infomation they desire.
+    
+    5. The undecided page offers the user a direct and to the point survey to pin point the type of investment they are most
+       suited for.
+       
+    6. The contact us page comprises of a big glaring Reddit icon and turns orange when hovered over. This is to show users clearly that
+       the button is an external link to the community page.
 
 ```
+
+# Features 📑
+
+### Existing Features
+
+```
+    1. Navigation Bar:
+        - Fully linked to all pages from all pages.
+        - User is able to navigate the website without the use of browser back button.
+        - Able to go back to the index page by clicking on the FIRE logo.
+    
+    2. Footer:
+        - Social media icons changes color on hover.
+        - Social media icons links to respective external sites.
+    
+    3. Buttons:
+        - Buttons turns white on hover.
+        - Buttons links to their respective locations.
+    
+    4. Saver and Grower page search bars:
+        - Displays stocks information in an accordian.
+        - All information including line chart is real time.
+    
+    5. Undecided page:
+        - Every selection has a corresponding unique outcome.
+        - Buttons that spawns from the results are linked to their respective pages.
+        
+```
+
+
+
+
