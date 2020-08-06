@@ -957,6 +957,13 @@ hr {
         background-color: rgba(0,0,0,0.8);
         border-radius: 25px;
     }
+
+    /* Undecided page */
+
+    #undecided-card {
+    width: 80% !important;
+    margin-left: 10%;
+    }
 }
 
 @media only screen and (max-width: 990px) {
