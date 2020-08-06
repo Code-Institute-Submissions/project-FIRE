@@ -185,7 +185,7 @@ Alpha Vantage API:
     
 ```
 
-# Testing
+# Testing 💯
 
 ### All testing were made manually, no automated testing was implemented.
 
@@ -195,7 +195,7 @@ In depth testing file:
 
 ```
 
-# Deployment
+# Deployment 🚀
 
 ### Steps I took to deploy my project
 
@@ -215,7 +215,7 @@ In depth testing file:
 
 ```
 
-# Credits 
+# Credits ❤️
 
 ### Acknowledgement
 
