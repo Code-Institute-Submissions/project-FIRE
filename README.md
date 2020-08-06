@@ -41,11 +41,14 @@ As the user of the website, I hope to:
 
 # UX Design 🎯
 
+### Information architecture
+
 ```
-Information architecture : 
     
     1. The index page provides the user with 3 distinct choices. Every choice has an interesting writeup to let the 
-       user make an informed decision and a bright orange button to navigate to the respective pages.
+       user make an informed decision and a bright orange button to navigate to the respective pages. The index page is
+       also the only page with a video as its background because I did not wish to compromise on readability on the other
+       text heavy pages.
        
     2. The navigation links allows the user to browse through each choice easily. The navigation links are also 
        available on every page.
@@ -62,6 +65,17 @@ Information architecture :
     6. The contact us page comprises of a big glaring Reddit icon and turns orange when hovered over. This is to show users clearly that
        the button is an external link to the community page.
 
+```
+
+### Mobile responsiveness
+
+```
+
+    1. Website is fully mobile responsive on all screen sizes.
+    
+    2. Navbar shrinks to a hamburger and creates a whole page length dropdown. This so so that the background text would not be in the way
+       of the navigation.
+    
 ```
 
 
@@ -173,7 +187,7 @@ Alpha Vantage API:
 
 # Testing
 
-##### All testing were made manually, no automated testing was implemented.
+### All testing were made manually, no automated testing was implemented.
 
 ```
 
@@ -183,7 +197,7 @@ In depth testing file:
 
 # Deployment
 
-##### Steps I took to deploy my project
+### Steps I took to deploy my project
 
 ```
 
@@ -201,6 +215,33 @@ In depth testing file:
 
 ```
 
+# Credits 
+
+### Acknowledgement
+
+```
+
+This project would not have been made possible without StackOverFlow forums, w3schools and Bootstrap documentation.
+
+```
+
+### Images and video credits 
+
+```
+
+Grower.jpg - https://pixabay.com/photos/money-profit-finance-business-2696228/
+
+Mainpage video - https://mixkit.co/free-stock-video/hud-style-animated-data-graph-growth-trend-visualization-5396/
+
+Fire-background.jpg - https://unsplash.com/photos/DUXACn8tgp4
+
+Thinking.jpg - https://medium.com/hltechnologyblog/legacy-technology-and-the-future-f10c85041d95
+
+Saver.jpg - https://pxhere.com/en/photo/1166815
+
+Fire-background.jpg - https://images.unsplash.com/photo-1504470695779-75300268aa0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=60
+
+```
 
 
 
